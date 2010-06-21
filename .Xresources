@@ -1,0 +1,149 @@
+Xft.dpi: 96.0
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.antialias: true
+Xft.rgba: none 
+!Шрифт в иксовых приложениях Xaw, Tcl/Tk итп
+!*Font: -*-terminus-medium-r-*-*-*-120-*-*-*-*-iso10646-1
+*Font: -xos4-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
+Xcursor.theme: Obsidian
+
+
+
+#define FG_BASE #000000
+#define BG_BASE #FFFAFA
+
+
+! внешний вид виджетов Xaw 
+*background:  #F1F3F1
+!*background: #D4D0C8
+*foreground:  FG_BASE
+*Text.background: #FFFFFF
+*Command.borderWidth: 1
+*Command.foreground: FG_BASE
+*Command.background: BG_BASE
+*Toggle.foreground: FG_BASE
+*Toggle.background: BG_BASE
+*MenuButton.foreground: FG_BASE
+!*MenuButton.background: BG_BASE
+*SimpleMenu.background: #FFFFE7
+*SimpleMenu.borderColor: #316BC6
+*SmeBSB.foreground:  #003457
+*Tree.background:  #FFFFFF
+*Porthole.background:  #FFFFFF
+
+#define SHAPE_STYLE roundedRectangle
+#define CR_PERCENT 12
+*MenuButton.cornerRoundPercent: CR_PERCENT
+*MenuButton.shapeStyle: SHAPE_STYLE
+*Command.cornerRoundPercent: CR_PERCENT
+*Command.shapeStyle: SHAPE_STYLE
+*cornerRoundPercent: CR_PERCENT
+*shapeStyle: SHAPE_STYLE
+ 
+! настраиваем "стандартную" 16-ти цветную палитру (раскрашиваем терминал)
+!for all terminals
+*color0:      #000000
+*color1:      #9e1828
+*color2:      #aece92
+*color3:      #968a38
+*color4:      #414171
+*color5:      #963c59
+*color6:      #418179
+*color7:      #bebebe
+*color8:      #666666
+*color9:      #cf6171
+*color10:     #c5f779
+*color11:     #fff796
+*color12:     #4186be
+*color13:     #cf9ebe
+*color14:     #71bebe
+*color15:     #ffffff
+ 
+! настройка внешнего вида отдельных приложений
+ 
+!xcalc
+xcalc*geometry: 200x275
+xcalc.ti.bevel.background: #111111
+xcalc.ti.bevel.screen.background: #000000
+xcalc.ti.bevel.screen.DEG.background: #000000
+xcalc.ti.bevel.screen.DEG.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.GRAD.background: #000000
+xcalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.RAD.background: #000000
+xcalc.ti.bevel.screen.RAD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.INV.background: #000000
+xcalc.ti.bevel.screen.INV.foreground: Red
+xcalc.ti.bevel.screen.LCD.background: #000000
+xcalc.ti.bevel.screen.LCD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.LCD.shadowWidth: 0
+xcalc.ti.bevel.screen.M.background: #000000
+xcalc.ti.bevel.screen.M.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.P.background: #000000
+xcalc.ti.bevel.screen.P.foreground: Yellow
+xcalc.ti.Command.foreground: White
+xcalc.ti.Command.background: #777777
+xcalc.ti.button5.background: Orange3
+xcalc.ti.button19.background: #611161
+xcalc.ti.button18.background: #611161
+xcalc.ti.button20.background: #611111
+xcalc.ti.button25.background: #722222
+xcalc.ti.button30.background: #833333
+xcalc.ti.button35.background: #944444
+xcalc.ti.button40.background: #a55555
+xcalc.ti.button22.background: #222262
+xcalc.ti.button23.background: #222262
+xcalc.ti.button24.background: #222272
+xcalc.ti.button27.background: #333373
+xcalc.ti.button28.background: #333373
+xcalc.ti.button29.background: #333373
+xcalc.ti.button32.background: #444484
+xcalc.ti.button33.background: #444484
+xcalc.ti.button34.background: #444484
+xcalc.ti.button37.background: #555595
+xcalc.ti.button38.background: #555595
+xcalc.ti.button39.background: #555595
+XCalc*Cursor:                 hand2
+!XCalc*ShapeStyle:             rectangle
+ 
+!xmessage
+!.xmessage.form.okay.background: #777777
+!.xmessage.form.okay.foreground: snow
+xmessage*defaultButton: okay
+Xmessage.form.message.Scroll:  WhenNeeded
+ 
+!xfontsel
+!XFontSel*sampleText.background: TEXTBG
+XFontSel*menu*showUnselectable: false
+XFontSel*MenuButton.shadowWidth: 0
+XFontsel*Toggle*ToggleStyle: check
+XFontsel*MenuButton*Justify:    left
+XFontsel*MenuButton*MenuButtonStyle: select
+.xfontsel.pane.commandBox.quitButton.background: #777777
+.xfontsel.pane.commandBox.quitButton.foreground: snow
+.xfontsel.pane.commandBox.ownButton.background: orange3
+.xfontsel.pane.commandBox.ownButton.foreground: snow
+.xfontsel.pane.commandBox.countLabel.background: snow
+.xfontsel.pane.viewPort.sampleText.background: #777777
+.xfontsel.pane.viewPort.sampleText.foreground: snow
+.xfontsel.pane.fieldBox.MenuButton.borderWidth: 1
+.xfontsel.pane.fieldBox.MenuButton.internalHeight: 1
+.xfontsel.pane.fieldBox.MenuButton.internalWidth: 2
+.xfontsel.pane.fieldBox.MenuButton.shapeStyle: rectangle
+ 
+!xterm
+XTerm*background:  #000000
+XTerm*foreground:  #7f7f7f
+
+# include ".urxvtrc" 
+# include ".yeahconsolerc"
+Tkabber*Font:   Verdana 9
+Vkeybd*Font:   Verdana 9
+*tkTheme: tile-qt
+
+*vt100.translations: #override \n\
+        Ctrl ~Shift <Key>Tab: string(0x1b) string("[27;5;9~") \n \
+        Ctrl Shift <Key>Tab: string(0x1b) string("[27;6;9~") \n
+
+
+Emacs*useXIM:false        
