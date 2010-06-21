@@ -1,0 +1,59 @@
+! геометрия (позиция, размер) окна (в символах). Стандартный размер: 80x24, увеличено для использования табов
+!URxvt.geometry: 82x26
+! используемый шрифт
+! URxvt.font: xft:DejaVu Sans Mono:pixelsize=13,xft:Bitstream Vera Sans Mono 
+URxvt.font: xft:Consolas:pixelsize=20,xft:Bitstream Vera Sans Mono 
+URxvt*iconFile: /usr/share/pixmaps/urxvt_32x32.xpm
+!URxvt.font: xft:Terminus:slant=0:weight=80:width=100:pixelsize=14
+! цвет фона
+URxvt.background: #000000
+! цвет переднего плана
+URxvt.foreground: #DFDFDF
+! процент "гашения" цвета текста в неактивном окне
+URxvt.fading: 40  
+!  уменьшение (-100 .. -1) или увеличение (0 .. 100) яркости прозрачного фона
+URxvt.shading: 100
+! Псевдопрозрачность
+URxvt.transparent: false
+! Цвет "гашения" текста
+URxvt.fadeColor: #666666
+! Цвет окрашивания прозрачного фона
+URxvt.tintColor: #354040
+! стиль скроллбара
+URxvt.scrollstyle: plain
+! цвет скроллера
+URxvt.scrollColor: #C9BD9A
+! цвет основной части скролл-бара
+!URxvt.troughColor: #000000
+! скроллбар
+URxvt.scrollBar: true
+! расположение скроллбара 
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+! Мерцание курсора
+URxvt.cursorBlink: true
+! включить расширения на perl: основные, табы
+URxvt.perl-ext-common: default,matcher
+URxvt.matcher.button: 1
+! цвета  табов (настройка для прозрачных терминалов)
+URxvt.tabbar-fg: 2
+URxvt.tabbar-bg: -1
+URxvt.tab-fg: 7
+URxvt.tab-bg: -1
+!URxvt keysyms
+URxvt.keysym.C-Tab: \[27;5;9~
+URxvt.keysym.C-S-Tab: \[27;6;9~
+
+! russian utf-8
+URxvt.matcher.pattern.0:  (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\
+                           [a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\
+                           (\n\
+                             \\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\
+                             [a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\
+                           )+
+
+!URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+!URxvt.underlineURLs: true
+!URxvt.perl-lib: /home/dk/.urxvt/                               <--- your path
+!URxvt.perl-ext: selection,mark-yank-urls
+!URxvt.urlLauncher: chromium-browser

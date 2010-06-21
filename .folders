@@ -1,0 +1,4 @@
+%inbox  "inbox"
++trash  "Trash"
++draft  "Drafts"
+%[Gmail]/self	"Self"

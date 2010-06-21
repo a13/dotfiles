@@ -1,0 +1,32 @@
+#!/bin/sh
+#export GTK_IM_MODULE=ibus
+#export XMODIFIERS='@im=ibus'
+#export QT_IM_MODULE=ibus
+setxkbmap us,ru -option 
+setxkbmap us,ru -option "grp_led:scroll,ctrl:nocaps" -model microsoft7000
+#setxkbmap us,ru -option "grp:toggle,grp_led:scroll,ctrl:nocaps,compose:rwin" -model geniuscomfy2
+#setxkbmap us,ru -option "grp_led:scroll,ctrl:nocaps,compose:rwin" -model geniuscomfy2
+xmodmap ~/.Xmodmap
+xbindkeys
+
+xscreensaver-command -exit
+xscreensaver -no-splash &
+
+killall -9 yeahconsole; yeahconsole -e /home/dk/bin/screen-rds yeah &
+#cairo-compmgr &
+#plasma-desktop&
+#xcompmgr -c -r20 -o.55 &
+
+#test "$1" = "stumpwm" && (
+#    feh --bg-scale ~/.wallpaper
+#)
+
+XCURSOR_THEME=Obsidian
+XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
+QT_PLUGIN_PATH=/home/dk/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
+export GTK_RC_FILES=/etc/gtk/gtkrc:/home/dk/.gtkrc::/home/dk/.kde/share/config/gtkrc
+export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/dk/.gtkrc-2.0::/home/dk/.kde/share/config/gtkrc-2.0
+
+pkill -9 sulci ; /home/dk/bin/sulci &
+#netstat -p -a 2>/dev/null | egrep 'emacs.*server' && emacs --daemon &
+#tint2 &

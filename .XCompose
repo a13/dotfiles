@@ -1,0 +1,170 @@
+include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
+
+# Punctuation
+# знаки препинания, необходимые в русском, которых нет в en_US.UTF-8/Compose
+<Multi_key> <period> <minus> : "…" U2026 # HORIZONTAL ELLIPSIS, многоточие
+<Multi_key> <period> <space> : "…" U2026 # HORIZONTAL ELLIPSIS, многоточие
+<Multi_key> <?> <!> : "⁈" U2048 # QUESTION EXCLAMATION, ?!
+<Multi_key> <period> <colon> : "…" # ELLIPSIS
+
+# №: набирается в русской раскладке без ухищрений,
+# « » кавычки: Compose + < + <  и Compose + > + > соответственно
+# ­— тире: Compose + 3 раза дефис
+
+# COMBINING SIGNS, модифицирующие знаки (меняют предыдущий символ)
+<Multi_key> <apostrophe> <apostrophe> : "́" U0301 # ударение
+<Multi_key> <v> <v> : "⃗" U20D7 # знак вектора
+<Multi_key> <z> <z> : "̶"  U0336 # зачёркивание
+
+# Удобная пунктуация в русской раскладке
+<Multi_key> <Cyrillic_be> <Cyrillic_be>	: "„" # открывающая кавычка-лапка (RUS)
+<Multi_key> <Cyrillic_io> <Cyrillic_io>	: "“" # закрывающая кавычка-лапка (RUS)
+#<Multi_key> <slash> <slash> : "«" # открывающая кавычка-ёлочка (RUS)
+<Multi_key> <bar> <bar> : "»" # закрывающая кавычка-ёлочка (RUS)
+<Multi_key> <Cyrillic_BE> <Cyrillic_BE>: "«" # открывающая кавычка-ёлочка (RUS)
+<Multi_key> <Cyrillic_YU> <Cyrillic_YU>: "»" # закрывающая кавычка-ёлочка (RUS)
+<Multi_key> <Cyrillic_ya> : "̶"  # зачеркивание (комбинирующееся)
+<Multi_key> <Cyrillic_e> <Cyrillic_e> : "́" # ударениее (комбинирующееся)
+
+# Old (pre-1917) russian:
+<Multi_key> <Cyrillic_SOFTSIGN> <minus>	: "Ҍ" U0462 #CYRILLIC CAPITAL LETTER YAT
+<Multi_key> <Cyrillic_softsign> <minus> : "ѣ" U0463 #CYRILLIC SMALL LETTER YAT
+<Multi_key> <Cyrillic_O> <minus> : "Ѳ" U0472 # CYRILLIC CAPITAL LETTER FITA
+<Multi_key> <Cyrillic_o> <minus> : "ѳ" U0473 # CYRILLIC SMALL LETTER FITA
+
+# MATH, немного математики…
+<Multi_key> <slash> <slash> : "⁄" U2044 # Дробь
+<Multi_key> <r> <r> : "√" U221A # SQUARE ROOT
+<Multi_key> <r> <3> : "∛" U221B # CUBE ROOT
+<Multi_key> <m> <A> : "∀" U2200 # FOR ALL
+<Multi_key> <m> <E> : "∃" U2203 # THERE EXISTS
+<Multi_key> <m> <i> : "∊" U220A # SMALL ELEMENT OF
+<Multi_key> <m> <d> : "∂" U2202 # PARTIAL DIFFERENTIAL
+<Multi_key> <m> <D> : "∆" U2206 # INCREMENT, Laplace operator
+<Multi_key> <m> <S> : "∑" U2211 # N-ARY SUMMATION, Sigma
+<Multi_key> <m> <I> : "∫" U222B # INTEGRAL
+<Multi_key> <equal> <asciitilde> : "≈" U2248 # ALMOST EQUAL TO
+<Multi_key> <asciitilde> <equal> : "≈" U2248 # ALMOST EQUAL TO
+<Multi_key> <underscore> <underscore> : "‾" U023E # OVERLINE
+<Multi_key> <equal> <slash>  	: "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <slash> <equal>  	: "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <minus> <equal> 	: "≡"   U2261 # IDENTICAL TO
+<Multi_key> <equal> <minus> 	: "≡"   U2261 # IDENTICAL TO
+
+# GREEK LETTERS, греческие буквы
+<Multi_key> <ampersand> <a> : "α"
+<Multi_key> <ampersand> <A> : "Α"
+<Multi_key> <ampersand> <b> : "β"
+<Multi_key> <ampersand> <B> : "Β"
+<Multi_key> <ampersand> <c> : "χ"
+<Multi_key> <ampersand> <C> : "Χ"
+<Multi_key> <ampersand> <d> : "δ"
+<Multi_key> <ampersand> <D> : "Δ"
+<Multi_key> <ampersand> <e> : "ε"
+<Multi_key> <ampersand> <E> : "Ε"
+<Multi_key> <ampersand> <f> : "φ"
+<Multi_key> <ampersand> <F> : "Φ"
+<Multi_key> <ampersand> <g> : "γ"
+<Multi_key> <ampersand> <G> : "Γ"
+<Multi_key> <ampersand> <h> : "η"
+<Multi_key> <ampersand> <H> : "Η"
+<Multi_key> <ampersand> <i> : "ι"
+<Multi_key> <ampersand> <I> : "Ι"
+<Multi_key> <ampersand> <j> : "ϕ"
+<Multi_key> <ampersand> <J> : "ϑ"
+<Multi_key> <ampersand> <k> : "κ"
+<Multi_key> <ampersand> <K> : "Κ"
+<Multi_key> <ampersand> <l> : "λ"
+<Multi_key> <ampersand> <L> : "Λ"
+<Multi_key> <ampersand> <m> : "μ"
+<Multi_key> <ampersand> <M> : "Μ"
+<Multi_key> <ampersand> <n> : "ν"
+<Multi_key> <ampersand> <N> : "Ν"
+<Multi_key> <ampersand> <o> : "ο"
+<Multi_key> <ampersand> <O> : "Ο"
+<Multi_key> <ampersand> <p> : "π"
+<Multi_key> <ampersand> <P> : "Π"
+<Multi_key> <ampersand> <q> : "θ"
+<Multi_key> <ampersand> <Q> : "Θ"
+<Multi_key> <ampersand> <r> : "ρ"
+<Multi_key> <ampersand> <R> : "Ρ"
+<Multi_key> <ampersand> <s> : "σ"
+<Multi_key> <ampersand> <S> : "Σ"
+<Multi_key> <ampersand> <t> : "τ"
+<Multi_key> <ampersand> <T> : "Τ"
+<Multi_key> <ampersand> <u> : "υ"
+<Multi_key> <ampersand> <U> : "Υ"
+<Multi_key> <ampersand> <v> : "ϖ"
+<Multi_key> <ampersand> <V> : "ς"
+<Multi_key> <ampersand> <w> : "ω"
+<Multi_key> <ampersand> <W> : "Ω"
+<Multi_key> <ampersand> <x> : "ξ"
+<Multi_key> <ampersand> <X> : "Ξ"
+<Multi_key> <ampersand> <y> : "ψ"
+<Multi_key> <ampersand> <Y> : "Ψ"
+<Multi_key> <ampersand> <z> : "ζ"
+<Multi_key> <ampersand> <Z> : "Ζ"
+
+# макросы для писем и веба
+<Multi_key> <S> <Y> : "Sincerely yours"
+<Multi_key> <B> <R> : "Best regards"
+<Multi_key> <a> <h> : "<a href=\"\"></a>"
+<Multi_key> <i> <m> : "<img src=\"\" alt=\"\" >"
+<Multi_key> <b> <q> : "<blockquote><code></code></blockquote>"
+<Multi_key> <c> <d> : "<code></code>"
+
+# JUST FOR FUN, веселья ради
+<Multi_key> <bracketleft> <space> <bracketright> : "☐" # квадратик
+<Multi_key> <bracketleft> <v> <bracketright> : "☑" # квадратик
+<Multi_key> <bracketleft> <x> <bracketright> : "☒" # квадратик
+<Multi_key> <asterisk> <asterisk> : "★" U2605 # закрашенная звёзда
+<Multi_key> <asterisk> <0> : "☆" U2606 # незакрашенная звёзда
+<Multi_key> <t> <t> : "☎" U260E # телефон
+<Multi_key> <k> <b> : "⌨" U2328 # клавиатурка
+<Multi_key> <n> <n> : "♫" U266B # нотки
+<Multi_key> <less> <3> : "♥" U2665 # сердечко
+<Multi_key> <less> <0> : "♡" U2661 # пустое сердечко
+<Multi_key> <3> <3> : "☘" U2618 # трилистник
+<Multi_key> <asciitilde> <asciitilde> : "☙" U2619 # завитушка
+<Multi_key> <p> <e> : "☮"> U262E # пацифизм
+<Multi_key> <k> <z> : "☭" U262D # «коси и забивай»
+<Multi_key> <w> <w> : "⚠" U26A0 # внимание
+<Multi_key> <b> <h> : "☣" U2623 # биохазард!
+<Multi_key> <r> <a> : "☢" U2622 # радиоактивность!!
+<Multi_key> <percent> <percent> : "⌘" U2318 # осторожно, маки!!!
+<Multi_key> <r> <c> : "♲" U2672 # в переработку!
+<Multi_key> <s> <c> : "☠" U2620 # skull & crossbones
+
+# символы религий
+<Multi_key> <plus> <plus> : "☦" U2626 # православный крест
+<Multi_key> <parenleft> <asterisk> : "☪" U262A # звезда и полумесяц
+<Multi_key> <b> <b> : "卍" U534D # знак Будды
+<Multi_key> <B> <B> : "☸" U3638 # колесо Дхармы
+<Multi_key> <6> <6> : "✡" U2721 # звезда Давида
+<Multi_key> <y> <y> : "☯" U262F # Ин-Янь
+
+
+# Arrows
+# Simple
+<Multi_key> <less> <minus>	 	: "←" U2190 # LEFTWARDS ARROW
+<Multi_key> <l> <asciicircum>		: "↑" U2191 # UPWARDS ARROW
+<Multi_key> <minus> <greater> 		: "→" U2192 # RIGHTWARDS ARROW
+<Multi_key> <l> <v> 			: "↓" U2193 # DOWNWARDS ARROW
+<Multi_key> <minus> <less> <greater>  	: "↔" U2194 # LEFT RIGHT ARROW
+<Multi_key> <minus> <less> <greater> 	: "↔" U2194 # LEFT RIGHT ARROW
+<Multi_key> <v> <asciicircum> 		: "↕" U2195 # UP DOWN ARROW
+<Multi_key> <asciicircum> <v>   	: "↕" U2195 # UP DOWN ARROW
+<Multi_key> <backslash> <asciicircum> 	: "↖" U2196 # NORTH WEST ARROW
+<Multi_key> <slash> <asciicircum> 	: "↗" U2197 # NORTH EAST ARROW
+<Multi_key> <backslash> <v> 		: "↘" U2198 # SOUTH EAST ARROW
+<Multi_key> <slash> <v> 		: "↙" U2199 # SOUTH WEST ARROW
+
+# Double
+<Multi_key> <less> <equal> 		: "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key> <bar> <asciicircum> 	: "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key> <equal> <greater> 		: "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key> <bar> <v> 			: "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key> <less> <greater> <equal> 	: "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key> <equal> <less> <greater> 	: "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+
+

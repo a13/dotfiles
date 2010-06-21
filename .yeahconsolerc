@@ -1,0 +1,34 @@
+! ------------ yeahconsole settings ---------------
+! горячие клавиши
+! вызов консоли
+yeahconsole*toggleKey: Win+grave
+!полноэкранный режим
+yeahconsole*keyFull: Alt+F12
+! задержка появления
+yeahconsole*aniDelay: 30
+! Внешний вид
+! левая граница (в пикселах) 
+yeahconsole*xOffset: 100
+! ширина (в пикселах)
+yeahconsole*screenWidth: 1480
+! высота консоли (в символах)
+yeahconsole*consoleHeight: 15
+! внешний вид полоски увеличения размера
+yeahconsole*handleWidth: 1
+yeahconsole*handleColor: rgb:8/8/7
+yeahconsole*handleColor.unfocus: rgb:4/4/38
+! цвет фона консоли
+yeahconsole*background: black
+! цвет текста
+yeahconsole*foreground: grey70
+! шрифт терминала
+!yeahconsole*font: -*-terminus-medium-*-*-*-*-*-100-100-*-*-iso10646-1
+!yeahconsole*faceName: Terminus:pixelsize=10:antialias=true:hinting=true
+! Its behaviour is
+yeahconsole*restart: 1
+! misc term features
+yeahconsole*loginShell: true
+yeahconsole*savelines: 10000
+yeahconsole*toolBar: false
+! используемый терминал - должен поддерживать те же параметры командной строки что и xterm/rxvt
+yeahconsole*term: urxvtcd

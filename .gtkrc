@@ -1,0 +1,9 @@
+include "/home/dk/.themes/Dyne/gtk-2.0/gtkrc"
+style "default-text" {
+       fontset = "-*-verdana-medium-r-*-*-*-90-100-100-*-*-iso10646-1,\
+                -*-arial-medium-r-normal--*-80*-*-*-*-iso10646-1,\
+       		  -*-helvetica-medium-r-normal--*-80*-*-*-*-*-*"
+}
+
+class "GtkWidget" style "default-text"
+
