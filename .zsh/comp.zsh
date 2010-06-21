@@ -1,3 +1,4 @@
+# -*- mode: shell-script; -*-
 #Красивости и фишки дополнения
 #
 zstyle ':completion:*:default' list-colors ${LS_COLORS}

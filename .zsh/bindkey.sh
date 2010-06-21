@@ -1,4 +1,3 @@
-
 bindkey -d                                      # reset
 #bindkey -v                                     # vi key bindings
 bindkey -e                                       # emacs key bindings

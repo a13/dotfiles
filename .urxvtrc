@@ -1,3 +1,4 @@
+! -*-	mode: conf-xdefaults;	-*-
 ! геометрия (позиция, размер) окна (в символах). Стандартный размер: 80x24, увеличено для использования табов
 !URxvt.geometry: 82x26
 ! используемый шрифт
@@ -32,8 +33,8 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: false
 ! Мерцание курсора
 URxvt.cursorBlink: true
-! включить расширения на perl: основные, табы
-URxvt.perl-ext-common: default,matcher
+! включить расширения на perl: основные
+URxvt.perl-ext-common: default
 URxvt.matcher.button: 1
 ! цвета  табов (настройка для прозрачных терминалов)
 URxvt.tabbar-fg: 2
@@ -41,8 +42,8 @@ URxvt.tabbar-bg: -1
 URxvt.tab-fg: 7
 URxvt.tab-bg: -1
 !URxvt keysyms
-URxvt.keysym.C-Tab: \[27;5;9~
-URxvt.keysym.C-S-Tab: \[27;6;9~
+!URxvt.keysym.C-Tab: \[27;5;9~
+!URxvt.keysym.C-S-Tab: \[27;6;9~
 
 ! russian utf-8
 URxvt.matcher.pattern.0:  (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\
