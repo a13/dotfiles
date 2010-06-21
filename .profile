@@ -28,7 +28,6 @@ export GTK_RC_FILES=/etc/gtk/gtkrc:/home/dk/.gtkrc::/home/dk/.kde/share/config/g
 export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/dk/.gtkrc-2.0::/home/dk/.kde/share/config/gtkrc-2.0
 stty -ixon
 
-
 #if [ "$TERM" != "screen" ] && [ ! $NOSCREEN ] ; then
 #    screen -R
 #    exit
