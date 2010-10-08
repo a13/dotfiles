@@ -1,6 +1,6 @@
-keysym Alt_R = F13
-keycode 192 = F14
+keycode 192 = F15
 keycode 193 = F15
-keycode 194 = F16
-keycode 195 = F17
-keycode 196 = F18
+keycode 194 = F17
+keycode 195 = F18
+keycode 196 = F19
+keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14
