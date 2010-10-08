@@ -9,10 +9,6 @@ xscreensaver -no-splash &
 
 killall -9 yeahconsole; yeahconsole -e /home/dk/bin/screen-rds yeah &
 
-#test "$1" = "stumpwm" && (
-#    feh --bg-scale ~/.wallpaper
-#)
-
 XCURSOR_THEME=Obsidian
 XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
 QT_PLUGIN_PATH=/home/dk/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
