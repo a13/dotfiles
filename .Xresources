@@ -141,9 +141,9 @@ Tkabber*Font:   Verdana 9
 Vkeybd*Font:   Verdana 9
 *tkTheme: tile-qt
 
-*vt100.translations: #override \n\
-        Ctrl ~Shift <Key>Tab: string(0x1b) string("[27;5;9~") \n \
-        Ctrl Shift <Key>Tab: string(0x1b) string("[27;6;9~") \n
+! *vt100.translations: #override \n\
+!         Ctrl ~Shift <Key>Tab: string(0x1b) string("[27;5;9~") \n \
+!         Ctrl Shift <Key>Tab: string(0x1b) string("[27;6;9~") \n
 
 
 Emacs*useXIM:false        
