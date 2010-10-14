@@ -2,15 +2,12 @@
 include "/usr/share/themes/QtCurve/gtk-2.0/gtkrc"
 
 style "user-font" {
-	font_name = "Lucida Grande 13"
+	font_name = "Lucida Grande 9"
 }
 
 widget_class "*" style "user-font"
 
-gtk-font-name="Lucida Grande 13"
-gtk-key-theme-name = "Emacs"
-gtk-icon-theme-name = "allgrey"
-
+gtk-font-name="Lucida Grande 9"
 
 include "/home/dk/.gtkrc.mine"
 

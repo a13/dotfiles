@@ -94,7 +94,7 @@
 ;;  (1 t nil :class "XTerm"))
 
 (run-commands "gnewbg web" "gnewbg IM" "gnewbg Media" "gnewbg virtual")
-(run-shell-command "cairo-compmgr &" )
+(run-shell-command "xxkb" )
 (define-frame-preference "IM"
     (0 t t :title "mcabber")
   (1 t t :title "Tkabber"))

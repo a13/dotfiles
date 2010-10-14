@@ -3,7 +3,7 @@
 !URxvt.geometry: 82x26
 ! используемый шрифт
 ! URxvt.font: xft:DejaVu Sans Mono:pixelsize=13,xft:Bitstream Vera Sans Mono 
-URxvt.font: xft:Consolas:pixelsize=20,xft:Bitstream Vera Sans Mono 
+URxvt.font: xft:Consolas:size=12,xft:Bitstream Vera Sans Mono 
 URxvt*iconFile: /usr/share/pixmaps/urxvt_32x32.xpm
 !URxvt.font: xft:Terminus:slant=0:weight=80:width=100:pixelsize=14
 ! цвет фона

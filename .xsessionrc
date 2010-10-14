@@ -1,9 +1,10 @@
 #!/bin/sh
-setxkbmap us,ru -option 
-setxkbmap us,ru -option "grp_led:scroll,ctrl:nocaps" -model microsoft7000
+#env > ~/.env-xsessionrc
+setxkbmap us -option 
+setxkbmap us,ru,us -option "grp_led:scroll,ctrl:nocaps" -model microsoft7000
 xmodmap ~/.Xmodmap
 xbindkeys
-
+feh --bg-scale ~/.wallpaper
 xscreensaver-command -exit
 xscreensaver -no-splash &
 

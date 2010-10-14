@@ -1,11 +1,13 @@
-Xft.dpi: 96.0
+Xft.dpi: 120.0
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.antialias: true
 Xft.rgba: none 
 !Шрифт в иксовых приложениях Xaw, Tcl/Tk итп
 !*Font: -*-terminus-medium-r-*-*-*-120-*-*-*-*-iso10646-1
-*Font: -xos4-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
+!*Font: -xos4-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
+!*Font: -*-terminus-*-*-*-*-17-*-100-100-*-*-iso10646-1
+*Font: -*-unifont-*-*-*-*-*-*-*-*-*-*-iso10646-*
 Xcursor.theme: Obsidian
 
 

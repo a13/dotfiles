@@ -8,11 +8,11 @@ yeahconsole*keyFull: Alt+F12
 yeahconsole*aniDelay: 30
 ! Внешний вид
 ! левая граница (в пикселах) 
-yeahconsole*xOffset: 100
+yeahconsole*xOffset: 000
 ! ширина (в пикселах)
-yeahconsole*screenWidth: 1480
+yeahconsole*screenWidth: 1680
 ! высота консоли (в символах)
-yeahconsole*consoleHeight: 15
+yeahconsole*consoleHeight: 24
 ! внешний вид полоски увеличения размера
 yeahconsole*handleWidth: 1
 yeahconsole*handleColor: rgb:8/8/7
