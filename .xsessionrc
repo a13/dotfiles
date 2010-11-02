@@ -3,6 +3,7 @@
 setxkbmap us -option 
 setxkbmap us,ru,us -option "grp_led:scroll,ctrl:nocaps" -model microsoft7000
 xmodmap ~/.Xmodmap
+killall -9 xxkb 2>/dev/null;xxkb &
 xbindkeys
 feh --bg-scale ~/.wallpaper
 xscreensaver-command -exit

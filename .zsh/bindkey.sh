@@ -4,6 +4,7 @@ bindkey -e                                       # emacs key bindings
 autoload -U edit-command-line
 zle -N  edit-command-line
 bindkey -M emacs "^X^E" edit-command-line
+bindkey -M emacs "^X^K" kill-region
 
 # Keyboard configuration
 bindkey "\e[2~"         quoted-insert           # Insert

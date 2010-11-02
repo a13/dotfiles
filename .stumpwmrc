@@ -93,8 +93,8 @@
 ;;  (0 t nil :class "Konqueror" :role "...konqueror-mainwindow")
 ;;  (1 t nil :class "XTerm"))
 
-(run-commands "gnewbg web" "gnewbg IM" "gnewbg Media" "gnewbg virtual")
-(run-shell-command "xxkb" )
+(run-commands "gnewbg web" "gnewbg IM" "gnewbg Media" "gnewbg virtual" "gnewbg remote")
+;;(run-shell-command "xxkb" )
 (define-frame-preference "IM"
     (0 t t :title "mcabber")
   (1 t t :title "Tkabber"))
@@ -131,3 +131,13 @@
 (define-key *top-map* (kbd "C-M-j") "move-window down")
 (define-key *top-map* (kbd "C-M-l") "move-window right")
 (define-key *top-map* (kbd "C-M-h") "move-window left")
+
+(defparameter *dbus-power-template* "dbus-send --system --print-reply --dest=\"org.freedesktop.Hal\" /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement." )
+
+(defmacro pm-command (name command)
+  `(defcommand ,name () ()
+	       (run-shell-command (concatenate 'string *dbus-power-template* ,command))))
+(pm-command suspend "Suspend int32:0")
+(pm-command hibernate "Hibernate")
+(pm-command reboot "Reboot")
+(pm-command shutdown "Shutdown")
