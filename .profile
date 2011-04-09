@@ -18,22 +18,5 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:/usr/NX/bin:$PATH"
+    PATH="$HOME/bin:$PATH"
 fi
-
-XCURSOR_THEME=Obsidian
-XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
-QT_PLUGIN_PATH=/home/dk/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
-export GTK_RC_FILES=/etc/gtk/gtkrc:/home/dk/.gtkrc::/home/dk/.kde/share/config/gtkrc
-export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/dk/.gtkrc-2.0::/home/dk/.kde/share/config/gtkrc-2.0
-stty -ixon
-
-#if [ "$TERM" != "screen" ] && [ ! $NOSCREEN ] ; then
-#    screen -R
-#    exit
-#fi
-
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-

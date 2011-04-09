@@ -1,5 +1,5 @@
 autoload -Uz vcs_info
-
+ 
 local -a clr
 local -A pc
 local -A smile
@@ -9,7 +9,7 @@ clr[2]=${2:-'cyan'}
 clr[3]=${3:-'green'}
 clr[4]=${4:-'yellow'}
 clr[5]=${5:-'white'}
-
+ 
 pc['\[']="%F{$clr[1]}["
 pc['\]']="%F{$clr[1]}]"
 pc['<']="%F{$clr[1]}<"
@@ -17,38 +17,21 @@ pc['>']="%F{clr[1]}>"
 pc['\(']="%F{clr[1]}("
 pc['\)']="%F{clr[1]})"
 pc['gs']="%F{clr[1]}-"
-
-
+ 
 POSTEDIT="$reset_color"
-
+ 
 _time=$pc['\[']%B%F{$clr[3]}%*$pc['\]']
 _path=$pc['\[']%B%F{$clr[4]}%~%(1/./.)$pc['\]']
-#_tail="%F{$clr[2]}:\>%b%f"
 _tail="%F{$clr[2]}:\>%b%f"
 _inputfmt=%F{$clr[5]}
 _namehost=%F{$clr[5]}%n@%m
-#_smile=%(?,%{$fg[green]%}:%)%{$reset_color%},%{$fg[red]%}:(%{$reset_color%}
-#_smile=%(?,%{$fg[green]%}:%)%{$reset_color%},%{$fg[red]%}:(%{$reset_color%}
-#local -h eon="%(?.[.%20(?.[%U.%S[))" eoff="%(?.].%20(?.%u].]%s))"
-#_smile="%(?,:),:(%%ls"
-#_smile=%(?%:)%:()%
-#_smile=%(?.%F{green}:\).%F{red}:\()
 _smile=%(?.%F{$clr[3]}:\).%F{$clr[1]}:\()%f
-#_smile="%(?%:):(%)"
-
-#_status=%F{%(?,%{$clr[3]%}:%)%{$reset_color%},%{$clr[1]%}:(%
-#_status=%F%(?,:%),:(%
-#_status=%F{$clr[5]}%(?,:%),:(%)
+ 
 prompt="$_time $_path 
 $_namehost $_tail $_inputfmt"
-#$_namehost $_smile $_tail $_inputfmt"
-#$_namehost$_tail $_inputfmt $_smile $_inputfmt"
-
+ 
 RPS1="$_smile"
-
-
-
+ 
 prompt_opts=( cr percent )
 precmd () { }
 preexec () { }
-

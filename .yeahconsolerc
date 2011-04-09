@@ -1,3 +1,4 @@
+! -*-	mode: conf-xdefaults;	-*-
 ! ------------ yeahconsole settings ---------------
 ! горячие клавиши
 ! вызов консоли
@@ -8,9 +9,9 @@ yeahconsole*keyFull: Alt+F12
 yeahconsole*aniDelay: 30
 ! Внешний вид
 ! левая граница (в пикселах) 
-yeahconsole*xOffset: 000
+!yeahconsole*xOffset: 000
 ! ширина (в пикселах)
-yeahconsole*screenWidth: 1680
+!yeahconsole*screenWidth: 1024
 ! высота консоли (в символах)
 yeahconsole*consoleHeight: 24
 ! внешний вид полоски увеличения размера

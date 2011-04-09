@@ -1,20 +1,10 @@
 #!/bin/sh
-#env > ~/.env-xsessionrc
+test -f ~/.wallpaper && feh --bg-scale ~/.wallpaper
+pgrep yeahconsole >>/dev/null || yeahconsole &
+
+xxkb &
 setxkbmap us -option 
-setxkbmap us,ru,us -option "grp_led:scroll,ctrl:nocaps" -model microsoft7000
-xmodmap ~/.Xmodmap
-killall -9 xxkb 2>/dev/null;xxkb &
+setxkbmap us,ru,us -option "ctrl:nocaps"
+xmodmap -e "keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14"
 xbindkeys
-feh --bg-scale ~/.wallpaper
-xscreensaver-command -exit
-xscreensaver -no-splash &
 
-killall -9 yeahconsole; yeahconsole -e /home/dk/bin/screen-rds yeah &
-
-XCURSOR_THEME=Obsidian
-XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
-QT_PLUGIN_PATH=/home/dk/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
-export GTK_RC_FILES=/etc/gtk/gtkrc:/home/dk/.gtkrc::/home/dk/.kde/share/config/gtkrc
-export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/dk/.gtkrc-2.0::/home/dk/.kde/share/config/gtkrc-2.0
-
-pkill -9 sulci ; /home/dk/bin/sulci &

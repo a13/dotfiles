@@ -1,15 +1,17 @@
-! -*-	mode: conf-xdefaults;	-*-
+! -*-	mode: xrdb;	-*-
 ! геометрия (позиция, размер) окна (в символах). Стандартный размер: 80x24, увеличено для использования табов
 !URxvt.geometry: 82x26
 ! используемый шрифт
 ! URxvt.font: xft:DejaVu Sans Mono:pixelsize=13,xft:Bitstream Vera Sans Mono 
-URxvt.font: xft:Consolas:size=12,xft:Bitstream Vera Sans Mono 
+URxvt.font: xft:Consolas:size=10,xft:Monospace
 URxvt*iconFile: /usr/share/pixmaps/urxvt_32x32.xpm
 !URxvt.font: xft:Terminus:slant=0:weight=80:width=100:pixelsize=14
+!*background: #242424
+!*foreground: #f6f3e8
 ! цвет фона
-URxvt.background: #000000
+URxvt.background: #242424
 ! цвет переднего плана
-URxvt.foreground: #DFDFDF
+URxvt.foreground: #f6f3e8
 ! процент "гашения" цвета текста в неактивном окне
 URxvt.fading: 40  
 !  уменьшение (-100 .. -1) или увеличение (0 .. 100) яркости прозрачного фона
@@ -19,7 +21,7 @@ URxvt.transparent: false
 ! Цвет "гашения" текста
 URxvt.fadeColor: #666666
 ! Цвет окрашивания прозрачного фона
-URxvt.tintColor: #354040
+!URxvt.tintColor: #354040
 ! стиль скроллбара
 URxvt.scrollstyle: plain
 ! цвет скроллера
@@ -29,12 +31,12 @@ URxvt.scrollColor: #C9BD9A
 ! скроллбар
 URxvt.scrollBar: true
 ! расположение скроллбара 
-URxvt.scrollBar_right: false
-URxvt.scrollBar_floating: false
+URxvt.scrollBar_right: true
+URxvt.scrollBar_floating: true
 ! Мерцание курсора
 URxvt.cursorBlink: true
 ! включить расширения на perl: основные
-URxvt.perl-ext-common: default
+URxvt.perl-ext-common: default,matcher
 URxvt.matcher.button: 1
 ! цвета  табов (настройка для прозрачных терминалов)
 URxvt.tabbar-fg: 2
@@ -57,4 +59,4 @@ URxvt.matcher.pattern.0:  (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\
 !URxvt.underlineURLs: true
 !URxvt.perl-lib: /home/dk/.urxvt/                               <--- your path
 !URxvt.perl-ext: selection,mark-yank-urls
-!URxvt.urlLauncher: chromium-browser
+URxvt.urlLauncher: x-www-browser

@@ -1,3 +1,8 @@
+! -*-	mode: conf-xdefaults;	-*-
+
+#include ".urxvtrc" 
+#include ".yeahconsolerc"
+
 Xft.dpi: 120.0
 Xft.hinting: true
 Xft.hintstyle: hintslight
@@ -11,16 +16,15 @@ Xft.rgba: none
 Xcursor.theme: Obsidian
 
 
-
 #define FG_BASE #000000
 #define BG_BASE #FFFAFA
 
 
 ! внешний вид виджетов Xaw 
-*background:  #F1F3F1
+!*background:  #F1F3F1
 !*background: #D4D0C8
-*foreground:  FG_BASE
-*Text.background: #FFFFFF
+!*foreground:  FG_BASE
+!*Text.background: #FFFFFF
 *Command.borderWidth: 1
 *Command.foreground: FG_BASE
 *Command.background: BG_BASE
@@ -45,23 +49,49 @@ Xcursor.theme: Obsidian
  
 ! настраиваем "стандартную" 16-ти цветную палитру (раскрашиваем терминал)
 !for all terminals
-*color0:      #000000
-*color1:      #9e1828
-*color2:      #aece92
-*color3:      #968a38
-*color4:      #414171
-*color5:      #963c59
-*color6:      #418179
-*color7:      #bebebe
-*color8:      #666666
-*color9:      #cf6171
-*color10:     #c5f779
-*color11:     #fff796
-*color12:     #4186be
-*color13:     #cf9ebe
-*color14:     #71bebe
-*color15:     #ffffff
- 
+! *color0:      #000000
+! *color1:      #9e1828
+! *color2:      #aece92
+! *color3:      #968a38
+! *color4:      #414171
+! *color5:      #963c59
+! *color6:      #418179
+! *color7:      #bebebe
+! *color8:      #666666
+! *color9:      #cf6171
+! *color10:     #c5f779
+! *color11:     #fff796
+! *color12:     #4186be
+! *color13:     #cf9ebe
+! *color14:     #71bebe
+! *color15:     #ffffff
+
+*background: #242424
+*foreground: #f6f3e8
+!black
+*color0: #242424
+*color8: #555544
+!red
+*color1: #9e1828
+*color9: #7c2929
+!green
+*color2: #227622
+*color10: #95e454
+!brown/yellow
+*color3: #B88B10
+*color11: #fff796
+!blue
+*color4: #5485a4
+*color12: #85A8C0
+!magenta
+*color5: #85608b
+*color13: #ad7fa8
+!cyan
+*color6: #82bFbF
+*color14: #12dFf5
+!white
+*color7: #f6f3e8
+*color15: #b6b8b9
 ! настройка внешнего вида отдельных приложений
  
 !xcalc
@@ -134,11 +164,9 @@ XFontsel*MenuButton*MenuButtonStyle: select
 .xfontsel.pane.fieldBox.MenuButton.shapeStyle: rectangle
  
 !xterm
-XTerm*background:  #000000
-XTerm*foreground:  #7f7f7f
+!XTerm*background:  #000000
+!XTerm*foreground:  #7f7f7f
 
-# include ".urxvtrc" 
-# include ".yeahconsolerc"
 Tkabber*Font:   Verdana 9
 Vkeybd*Font:   Verdana 9
 *tkTheme: tile
@@ -149,3 +177,4 @@ Vkeybd*Font:   Verdana 9
 
 
 Emacs*useXIM:false        
+fontforge.FontView.FontFamily: Terminus, Consolas

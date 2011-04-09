@@ -1,0 +1,16 @@
+XXkb.mainwindow.enable: Yes
+XXkb.controls.add_when_change: Yes
+XXkb.controls.focusout: No
+XXkb.app_list.wm_class_class.start_alt: *emacs* *Emacs*
+XXkb.app_list.wm_class_class.alt_group3: *emacs* *Emacs*
+XXkb.button.enable: No
+!XXkb.button.geometry:15x15+1585+0
+
+!XXkb.button.xpm.3:/usr/share/emacs/24.0.50/etc/emacs.xpm
+XXkb.mainwindow.type: tray
+XXkb.mainwindow.in_tray: true
+XXkb.mainwindow.geometry: 15x15+2+2
+XXkb.mainwindow.image.1: /usr/share/xxkb/en15.xpm
+XXkb.mainwindow.image.2: /usr/share/xxkb/ru15.xpm
+XXkb.mainwindow.image.3: /home/dk/.icons/emacs.xpm
+XXkb.mainwindow.image.4: /usr/share/xxkb/en15.xpm

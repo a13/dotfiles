@@ -1,6 +1,11 @@
 # -*- mode: shell-script; -*-
-#Красивости и фишки дополнения
+#автодополнение
 #
+autoload -U compinit
+compinit
+autoload -U incremental-complete-word
+zle -N incremental-complete-word
+
 zstyle ':completion:*:default' list-colors ${LS_COLORS}
 zstyle ':completion:*' completer _complete _list _oldlist _expand _ignored _match _correct _approximate _prefix
 zstyle ':completion:*' insert-unambiguous true
@@ -21,11 +26,11 @@ zstyle ':completion:*' use-compctl true
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' word true
 
-#Системные пользователи которых не стоит дополнять
+# system users
 zstyle ':completion:*:*:*:users' ignored-patterns \
-root toor daemon operator bin tty kmem games news \
-man sshd bind proxy _pflogd _dhcp uucp pop www \
-nobody mailnull smmsp gnats jabber mysql messagebus \
-dnscache dnslog ftp spamd
+root daemon bin sys sync games man lp mail news uucp \
+proxy www-data backup list irc gnats nobody libuuid \
+messagebus sshd polkituser saned avahi cl-builder \
+miredo usbmux statd haldaemon
 
 zstyle '*' single-ignored show

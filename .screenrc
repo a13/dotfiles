@@ -1,21 +1,11 @@
-# -*- mode: conf; -*-
 # Отключение стартового сообщения
 startup_message off
 # Увеличения буфера для прокрутки текста
 defscrollback 10240
 autodetach on
-# # use visual bell
+# use visual bell
 vbell on
-
-#nethack on
-
 # Заменить ctrl-A на ctrl-O
 escape ^Oo 
 caption always "%{= 45}%{+b w}Screen: %n | %h %=%t %c"
 hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
-
-# Ctrl-Tab
-#bindkey "^[[27;5;9~" next
-#
-# # Ctrl-Shift-Tab
-#bindkey "^[[27;6;9~" prev

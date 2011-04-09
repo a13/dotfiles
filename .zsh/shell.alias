@@ -8,37 +8,22 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
 alias du='du -h'
-#alias growisofs='unset SUDO_COMMAND; sudo growisofs'
-#alias mc='export LC_ALL=en_US.UTF-8; mc'
-#alias mkisofs='mkisofs -r -f -jcharset=koi8-r -joliet-long'
-#alias cdrecord='cdrecord -v driveropts=burnfree -multi'
-#alias formatcd='cdrecord blank=fast'
-#alias umount='sudo umount'
-#alias mount='sudo mount'
-#alias mount_cd9660='sudo mount_cd9660 -C utf-8'
-#alias mount_msdosfs='sudo mount_msdosfs -L ru_RU.UTF-8 -D CP866'
-#alias init='sudo init'
-#alias reboot='sudo reboot'
-#alias make='sudo make'
-#alias vi='vim'
 #alias gdb='gdb -q'
-#alias -g sudo vi='vim'
-#alias growisofs='unset SUDO_COMMAND; sudo growisofs -Z /dev/cd0 -r -f -jcharset=utf-8 -joliet-long'
-#alias formatdvd='sudo dvd+rw-format -force /dev/cd1'
 
-#alias -s {jpg,gif,bmp,png,xpm}=gqview
-#alias -s {mp3,ogg,wav,avi,mpeg,mpg,mov,m2v,wmv}=mplayer
+alias ec='emacsclient -c -a ""'
+alias eda='emacs --daemon'
+#alias -s {jpg,gif,bmp,png,xpm}=geeqie
+#alias -s {mp3,ogg,wav,avi,flac,mpeg,mpg,mov,m2v,wmv}=mplayer
 #alias -s {txt,h,c,cpp,cc,conf,4th,diff}=$EDITOR
 #alias -s {odt,doc,xls,sxw,rtf}=abiword
 #alias -s xls=gnumeric
-#alias -s pdf=kpdf
+#alias -s pdf=xpdf
 #alias -s chm=xchm
 #alias -s djvu=djview
-#alias -s iso='sudo mdconfig -a -t vnode -f'
 
 #autoload -U pick-web-browser
 #alias -s {html,htm}=pick-web-browser
-alias screenize="screen -d -m sh -c"#
+alias screenize="screen -d -m sh -c"
 if [ -x /usr/bin/grc ]; then
 	alias diff="grc --colour=auto diff"
 	alias netstat="grc --colour=auto netstat"
@@ -47,6 +32,7 @@ if [ -x /usr/bin/grc ]; then
 	alias traceroute="grc --colour=auto traceroute"
         alias last="grc --colour=auto last"
 fi
+
 
 for f in r w x;for s in + -;for u in u g o a ""                
 do
