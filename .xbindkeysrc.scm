@@ -80,5 +80,10 @@
 ;;Right - XF86AudioRaiseVolume
 (xbindkey '(XF86AudioRaiseVolume) "amixer set Master 1+")
 ;;Left - XF86AudioLowerVolume
-(xbindkey '(XF86AudioLowerVolume) "amixer set Master 1-") 
+(xbindkey '(XF86AudioLowerVolume) "amixer set Master 1-")
 
+(xbindkey '(mod4 XF86AudioRaiseVolume) "nyxmms2 next") 
+(xbindkey '(mod4 XF86AudioLowerVolume) "nyxmms2 prev")
+
+(xbindkey '(mod4 XF86MonBrightnessDown) "nyxmms2 pause")
+(xbindkey '(mod4 XF86MonBrightnessUp) "nyxmms2 play")
