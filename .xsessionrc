@@ -4,7 +4,7 @@ pgrep yeahconsole >>/dev/null || yeahconsole &
 
 xxkb &
 setxkbmap us -option 
-setxkbmap us,ru,us -option "ctrl:nocaps"
+setxkbmap us,ru,us -option "ctrl:nocaps,menu:compose"
 xmodmap -e "keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14"
 xbindkeys
 

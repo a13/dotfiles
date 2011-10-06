@@ -176,5 +176,5 @@ Vkeybd*Font:   Verdana 9
 !         Ctrl Shift <Key>Tab: string(0x1b) string("[27;6;9~") \n
 
 
-Emacs*useXIM:false        
+!Emacs*useXIM:false        
 fontforge.FontView.FontFamily: Terminus, Consolas
