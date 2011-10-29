@@ -61,7 +61,7 @@
 ;;F2 - XF86Battery
 ;;(xbindkey '(XF86Battery) "")
 ;;F4 - XF86Display
-;;(xbindkey '(XF86Display) "")
+(xbindkey '(XF86Display) "~/bin/togglemon.sh")
 ;;F5 - XF86Launch1
 (xbindkey '(XF86Launch1) "samsung-tools --quiet --backlight toggle")
 ;;F6 - XF86AudioMute
