@@ -1,0 +1,88 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#minibuffer {
+    background-color: #121212;
+    /*border: 1px solid #444;*/
+    border-top: 0;
+    color: #DCDCCD;
+    font: 13pt Consolas;
+    padding: 1px;
+}
+
+#minibuffer-prompt {
+    color: #8AC6F2 !important;
+}
+
+#minibuffer-input {
+    background-color: #121212 !important;
+    font: 13pt Consolas;
+    color: white !important;
+}
+
+#minibuffer .mode-text-widget {
+  display: none;
+}
+
+#minibuffer[minibuffermode="message"] .mode-text-widget {
+  display: block;
+  border-left: 1px solid threedshadow;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+#minibuffer[minibuffermode="message"] .mode-text-widget[value=""] {
+  display: none;
+}
+
+
+/* minibuffer highlighting */
+
+#minibuffer.highlight {
+  background-color: Highlight;
+  color: HighlightText;
+}
+
+#minibuffer.highlight[minibuffermode="message"] .mode-text-widget {
+  border-left: 1px solid highlighttext;
+}
+
+
+/* Completions display */
+
+tree.completions treechildren {
+    border: none !important;
+    background-color: #121212 !important;
+}
+
+tree.completions treecol { -moz-binding: none !important; }
+tree.completions {
+    -moz-appearance: none !important;
+    border: 0px none !important;
+    /*border-top: 4px double #333333 !important;*/
+    background-color: #121212 !important;
+    -moz-border-top-colors: -moz-initial !important;
+    color: #FEFEFE !important;
+    font: 13pt Consolas;
+}
+
+tree.completions treechildren::-moz-tree-row {
+    background-color: #121212 !important;
+    border: none;
+}
+
+tree.completions treechildren::-moz-tree-row(current) {
+    background-color: #CCDC90 !important;
+    color: #808080;
+}
+
+tree.completions treechildren::-moz-tree-cell-text(completion-description) {
+    color: #808080 !important;
+/*font-weight: bold !important;*/
+}
+
+tree.completions treechildren::-moz-tree-cell-text(current) {
+    color: #2E4340 !important;
+}
+
