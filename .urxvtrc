@@ -3,13 +3,16 @@
 !URxvt.geometry: 82x26
 ! используемый шрифт
 ! URxvt.font: xft:DejaVu Sans Mono:pixelsize=13,xft:Bitstream Vera Sans Mono 
-URxvt.font: xft:Consolas:size=10,xft:Monospace
+URxvt.font: xft:XFTMONOFONT,xft:Monospace
 URxvt*iconFile: /usr/share/pixmaps/urxvt_32x32.xpm
 !URxvt.font: xft:Terminus:slant=0:weight=80:width=100:pixelsize=14
+URxvt.lineSpace: 0
+URxvt.letterSpace: -1
 !*background: #242424
 !*foreground: #f6f3e8
 ! цвет фона
-URxvt.background: #242424
+! URxvt.background: #242424
+URxvt.background: #000000
 ! цвет переднего плана
 URxvt.foreground: #f6f3e8
 ! процент "гашения" цвета текста в неактивном окне
@@ -25,16 +28,23 @@ URxvt.fadeColor: #666666
 ! стиль скроллбара
 URxvt.scrollstyle: plain
 ! цвет скроллера
-URxvt.scrollColor: #C9BD9A
+URxvt.scrollColor: #1A1A1A
 ! цвет основной части скролл-бара
-!URxvt.troughColor: #000000
+!URxvt.troughColor: #1A1A1A
 ! скроллбар
 URxvt.scrollBar: true
+! прокрутка при выводе текста
+URxvt*scrollTtyOutput: False
+! прокрутка по нажатию клавиши
+URxvt*scrollTtyKeypress: True
+! 
+URxvt*scrollWithBuffer: True
+URxvt*secondaryScroll: True
 ! расположение скроллбара 
-URxvt.scrollBar_right: true
+URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: true
 ! Мерцание курсора
-URxvt.cursorBlink: true
+URxvt.cursorBlink: false
 ! включить расширения на perl: основные
 URxvt.perl-ext-common: default,matcher
 URxvt.matcher.button: 1
