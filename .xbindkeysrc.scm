@@ -1,6 +1,6 @@
 (define (aosd-echo text)
-  (define osdcmd "aosd_cat -x 0 -y 0 -t 2 -p 1 -n Consolas\\ 22 -f 100 -u 2000 -o 200 -R white -l 5")
-  (run-command (string-append "echo $@ " text "|" osdcmd)))
+  (let ((osdcmd "aosd_cat -x 0 -y 0 -t 2 -p 1 -n Consolas\\ 22 -f 100 -u 2000 -o 200 -R white -l 5"))
+    (run-command (string-append "echo $@ " text "|" osdcmd))))
  
 (define (run-and-osd keys cmd osd-text)
   (xbindkey-function keys
@@ -14,6 +14,7 @@
       (xbindkey
        (list 'mod4 (string-append "c:1" (number->string number))) wmcmd)
       (xbindkey
+       ;; MS Natural
        (string-append "c:19" (number->string (+ 2 number))) wmcmd)
       (bind-switch-to-desk (- number 1)))))
 
@@ -24,7 +25,7 @@
 
 ;; misc commands
 (xbindkey '(mod4 r) "/home/dk/bin/rundmenu")
-(xbindkey '(mod4 w) "/home/dk/bin/windmenu")
+(xbindkey '(mod4 w) "/home/dk/bin/windmenu xwin xdesk ebuf")
 (xbindkey '(mod4 b) "x-www-browser")
 (xbindkey '(mod4 l) "xscreensaver-command -lock || (xscreensaver -no-splash & xscreensaver-command -lock)")
 (xbindkey '(mod4 t) xterm)
@@ -71,7 +72,6 @@
 
 (xbindkey '(mod4 XF86MonBrightnessDown) "apctl.sh toggle")
 (xbindkey '(mod4 XF86MonBrightnessUp) "apctl.sh toggle")
-
 
 ;; misc multimedia keys
 ;; <XF86HomePage>

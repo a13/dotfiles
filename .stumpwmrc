@@ -54,7 +54,8 @@
 ;;(set-font "-*-doslike-normal-*-*-*-*-180-75-75-*-*-*-*")
 ;;(set-font "-misc-monaco-medium-r-normal--0-0-0-0-p-0-iso10646-1")
 ;(set-frame-outline-width 1)
-(set-focus-color "gray26")
+;;(set-focus-color "gray26")
+(set-focus-color "CornflowerBlue")
 (set-unfocus-color "gray24")
 (set-bg-color "black")
 ;(setf *frame-indicator-text* " Current frame ")
@@ -64,7 +65,7 @@
 (setf *menu-scrolling-step* 1)
 (setf *suppress-frame-indicator* nil)
 (setf *normal-border-width* 1)
-(setf *window-border-style* :none)
+(setf *window-border-style* :thin)
 (setf *mouse-focus-policy* :sloppy)
 ;; change window numbers
 ;; (setf *frame-number-map* "1234567890")
@@ -115,15 +116,15 @@
 ;;  (0 t nil :class "Konqueror" :role "...konqueror-mainwindow")
 ;;  (1 t nil :class "XTerm"))
 
-(run-commands "gnewbg web" "gnewbg IM" "gnewbg Media" "gnewbg virtual" "gnewbg remote")
+(run-commands "grename ws-default" "gnewbg ws-web" "gnewbg ws-im" "gnewbg ws-mail" "gnewbg ws-media" "gnewbg ws-virtual" "gnewbg ws-remote")
 ;;(run-shell-command "xxkb" )
-(define-frame-preference "IM"
+(define-frame-preference "ws-im"
     (0 t t :title "mcabber")
-  (1 t t :title "Tkabber"))
+    (1 t t :title "Tkabber"))
 ;;  (2 t t :class "psi")
 ;;  (2 t t :class "psi" :role "ChatDlg"))
-(define-frame-preference "web"
-    (0 t t :class "Chromium-browser"))
+(define-frame-preference "ws-web"
+    (0 t t :class "Chromium"))
   
   
 
@@ -154,14 +155,16 @@
 (define-key *top-map* (kbd "C-M-l") "move-window right")
 (define-key *top-map* (kbd "C-M-h") "move-window left")
 
-(defparameter *dbus-power-template* "dbus-send --system --print-reply --dest=\"org.freedesktop.Hal\" /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement." )
+;;(defparameter *dbus-power-template* "dbus-send --system --print-reply --dest=\"org.freedesktop.Hal\" /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement." )
+(defparameter *dbus-power-template* 
+  "dbus-send --system --print-reply --dest=\"org.freedesktop.UPower\" /org/freedesktop/UPower org.freedesktop.UPower." )
 
-(defmacro pm-command (name command)
+(defmacro defcommand-pm (name command)
   `(defcommand ,name () ()
   	"pm command"
 	       (run-shell-command (concatenate 'string *dbus-power-template* ,command))))
-(pm-command suspend "Suspend int32:0")
-(pm-command hibernate "Hibernate")
-(pm-command reboot "Reboot")
-(pm-command shutdown "Shutdown")
+(defcommand-pm suspend "Suspend")
+(defcommand-pm hibernate "Hibernate")
+(defcommand-pm reboot "Reboot")
+(defcommand-pm shutdown "Shutdown")
 ;;(resize-head 0 24 0 1000 600)
