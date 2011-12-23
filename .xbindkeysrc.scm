@@ -66,11 +66,11 @@
 ;; Fn+Left - XF86AudioLowerVolume
 (xbindkey '(XF86AudioLowerVolume) "amixer set Master 1-")
 
-(xbindkey '(mod4 XF86AudioRaiseVolume) "nyxmms2 next") 
-(xbindkey '(mod4 XF86AudioLowerVolume) "nyxmms2 prev")
+(xbindkey '(mod4 XF86AudioRaiseVolume) "apctl.sh next") 
+(xbindkey '(mod4 XF86AudioLowerVolume) "apctl.sh prev")
 
-(xbindkey '(mod4 XF86MonBrightnessDown) "nyxmms2 pause")
-(xbindkey '(mod4 XF86MonBrightnessUp) "nyxmms2 play")
+(xbindkey '(mod4 XF86MonBrightnessDown) "apctl.sh toggle")
+(xbindkey '(mod4 XF86MonBrightnessUp) "apctl.sh toggle")
 
 
 ;; misc multimedia keys
@@ -89,3 +89,4 @@
 ;; <XF86Save>
 ;; <print>
 ;; <XF86AudioPlay>
+(xbindkey '(XF86AudioPlay) "apctl.sh toggle")
