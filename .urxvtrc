@@ -8,8 +8,6 @@ URxvt*iconFile: /usr/share/pixmaps/urxvt_32x32.xpm
 !URxvt.font: xft:Terminus:slant=0:weight=80:width=100:pixelsize=14
 URxvt.lineSpace: 0
 URxvt.letterSpace: -1
-!*background: #242424
-!*foreground: #f6f3e8
 ! цвет фона
 ! URxvt.background: #242424
 URxvt.background: #000000

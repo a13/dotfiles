@@ -1,4 +1,3 @@
 #!/bin/sh
 
-exec ~/bin/stumpwm
-
+exec ~/bin/stumpwm --dynamic-space-size 64
