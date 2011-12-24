@@ -13,8 +13,7 @@ setxkbmap us -option
 setxkbmap us,ru,us -option "ctrl:nocaps,menu:compose"
 xmodmap -e "keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14"
 
-laptop-detect || exit
-
-# laptop
-synclient RightEdge=800
-pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
+laptop-detect && {
+    synclient RightEdge=800
+    pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
+}
