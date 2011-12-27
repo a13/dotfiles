@@ -5,7 +5,6 @@ test -f ~/.wallpaper \
     || xsetroot -solid black
 
 pgrep yeahconsole >>/dev/null || yeahconsole &
-lxpanel &
 
 # keyboard
 xxkb &
@@ -17,3 +16,4 @@ xmodmap -e "keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_La
     synclient RightEdge=800
     pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
+lxpanel &
