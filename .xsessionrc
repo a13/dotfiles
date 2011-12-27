@@ -1,7 +1,7 @@
 #!/bin/sh
 
 test -f ~/.wallpaper \
-    && feh --bg-scale ~/.wallpaper \
+    && feh --no-xinerama --bg-scale ~/.wallpaper \
     || xsetroot -solid black
 
 pgrep yeahconsole >>/dev/null || yeahconsole &
@@ -13,7 +13,7 @@ setxkbmap us -option
 setxkbmap us,ru,us -option "ctrl:nocaps,menu:compose"
 xmodmap -e "keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14"
 
-laptop-detect && {
+`which laptop-detect` && {
     synclient RightEdge=800
     pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
