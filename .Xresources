@@ -3,14 +3,38 @@
 #include ".Xhostres"
 
 !! Fonts settings
-Xft.dpi: 120.0
-Xft.hinting: true
-Xft.hintstyle: hintslight
+! http://www.freedesktop.org/wiki/ScreenFontSettings
+! Settings read by both Cairo and libXft: 
+! Xft.antialias:  (bool)// FC_ANTIALIAS Whether glyphs can be antialiased
 Xft.antialias: true
+! Xft.dpi:        (double)// FC_DPI  Target dots per inch
+Xft.dpi: 120.0
+! Xft.hinting:    (bool)// FC_HINTING  Whether the rasterizer should use hinting
+Xft.hinting: true
+! Xft.hintstyle:  (int) // FC_HINT_STYLE Automatic hinting style - hintnone hintslight hintmedium hintfull
+Xft.hintstyle: hintslight
+! Xft.rgba:       (int) // FC_RGBA unknown, rgb, bgr, vrgb, vbgr, none - subpixel geometry
 Xft.rgba: none 
+! Xft.lcdfilter   (int) // FC_LCD_FILTER type of lcd filter to use - lcdnone lcddefault lcdlight lcdlegacy
+Xft.lcdfilter: lcddefault
+! Settings specific to libXft:
+! Xft.scale (double) // FC_SCALE
+! Xft.render (bool) // XFT_RENDER
+! Xft.embolden (bool) // FC_EMBOLDEN true if emboldening needed
+! Xft.autohint (bool) // FC_AUTOHINT Use autohinter instead of normal hinter
+! Xft.minspace (bool) // FC_MINSPACE use minimum line spacing
+! Xft.maxglyphmemory (int) // XFT_MAX_GLYPH_MEMORY 
 
-#define FONT -gnu-unifont-*-*-*-*-16-*-*-*-*-*-iso10646-1
-#define MONOFONT -*-terminus-medium-r-*-*-*-120-*-*-*-*-iso10646-1
+! These ones seem to be unused?
+! Xft.core (bool) //  XFT_CORE
+! Xft.xlft (string) // XFT_XLFD
+#ifndef FONT
+# define FONT -gnu-unifont-*-*-*-*-16-*-*-*-*-*-iso10646-1
+#endif
+
+#ifndef MONOFONT
+# define MONOFONT -*-terminus-medium-r-*-*-*-120-*-*-*-*-iso10646-1
+#endif
 
 #ifndef XFTMONOFONT 
 # define XFTMONOFONT Consolas-10
