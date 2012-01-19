@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export QT_GRAPHICSSYSTEM=raster
+
 test -f ~/.wallpaper \
     && feh --no-xinerama --bg-scale ~/.wallpaper \
     || xsetroot -solid black
@@ -10,10 +12,14 @@ pgrep yeahconsole >>/dev/null || yeahconsole &
 xxkb &
 setxkbmap us -option 
 setxkbmap us,ru,us -option "ctrl:nocaps,menu:compose"
-xmodmap -e "keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14"
+xmodmap ~/.Xmodmap
+
+# nice beep
+xset b 40 8000 15
 
 `which laptop-detect` && {
     synclient RightEdge=800
     pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
+
 lxpanel &
