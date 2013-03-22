@@ -16,3 +16,5 @@ add_hook("before_quit_hook",
                              $options = ["y", "n"]));
              yield co_return(result);
          });
+
+cwd = make_file("/tmp/downloads");
