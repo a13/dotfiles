@@ -1,7 +1,9 @@
 #!/bin/sh
 
 export QT_GRAPHICSSYSTEM=raster
-
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export LC_MESSAGES=en_US.UTF-8
+export LC_NUMERIC=en_US.UTF-8
 test -f ~/.wallpaper \
     && feh --no-xinerama --bg-scale ~/.wallpaper \
     || xsetroot -solid black
@@ -11,7 +13,9 @@ pgrep yeahconsole >>/dev/null || yeahconsole &
 # keyboard
 xxkb &
 setxkbmap us -option 
-setxkbmap us,ru,us -option "ctrl:nocaps,menu:compose"
+setxkbmap us,ru,us -option "ctrl:nocaps,compose:menu"
+# workaround :(
+xkbcomp $DISPLAY - | egrep -v "group . = AltGr;" | xkbcomp - $DISPLAY
 xmodmap ~/.Xmodmap
 
 # nice beep
@@ -22,4 +26,4 @@ xset b 40 8000 15
     pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
 
-lxpanel &
+lxpanelx --colormap system &
