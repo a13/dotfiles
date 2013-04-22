@@ -38,3 +38,10 @@ for f in r w x;for s in + -;for u in u g o a ""
 do
     alias $f$u$s="chmod $u$s$f"    
 done
+
+alias u='sudo apt-get update'
+alias i='sudo aptitude install'
+alias d='sudo aptitude purge'
+alias l='dpkg -l'
+alias s='aptitude search'
+alias p='ps aux'
