@@ -1,5 +1,0 @@
-#!/bin/sh
-
-/home/dk/.moc/notify.scm "$1" "$2" "$4"
-/usr/lib/lastfmsubmitd/lastfmsubmit --encoding "UTF8" --artist "$1" --title "$2" --length "$3" --album "$4" 
-

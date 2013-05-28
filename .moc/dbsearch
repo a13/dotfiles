@@ -1,7 +1,0 @@
-#!/bin/sh
-
-locate -d ~/music.db $@| while read f
-do
-    file -i "$f" | grep  -q "audio\/" && echo $f
-done
-    
