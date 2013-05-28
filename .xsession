@@ -24,8 +24,8 @@ pgrep yeahconsole >>/dev/null || yeahconsole &
 xxkb &
 # reset all
 setxkbmap us -option 
-# english, russian, emacs
-setxkbmap us,ru,us -option "ctrl:nocaps,menu:compose"
+# english, russian, emacs, caps -> ctrl, menu as compose key
+setxkbmap us,ru,us -option "ctrl:nocaps,compose:menu"
 # libX11 workaround :(
 xkbcomp $DISPLAY - | egrep -v "group . = AltGr;" | xkbcomp - $DISPLAY
 xmodmap ~/.Xmodmap
