@@ -1,3 +1,4 @@
+# -*- mode: shell-script; -*-
 alias ls='ls -F --color=auto'
 #alias ls='ls -FG'
 alias ll='ls -lFG'
