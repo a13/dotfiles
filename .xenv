@@ -1,7 +1,0 @@
-XCURSOR_THEME=Obsidian
-XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
-QT_PLUGIN_PATH=$HOME/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
-export GTK_RC_FILES=/etc/gtk/gtkrc:$HOME/.gtkrc::$HOME/.kde/share/config/gtkrc
-export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:$HOME/.gtkrc-2.0::$HOME/.kde/share/config/gtkrc-2.0
-export LC_NUMERIC="en_US.UTF-8"
-export LC_MESSAGES="en_US.UTF-8"
