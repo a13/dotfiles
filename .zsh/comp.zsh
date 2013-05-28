@@ -7,7 +7,6 @@ autoload -U incremental-complete-word
 zle -N incremental-complete-word
 
 zstyle ':completion:*:default' list-colors ${LS_COLORS}
-zstyle ':completion:*' completer _complete _list _oldlist _expand _ignored _match _correct _approximate _prefix
 zstyle ':completion:*' insert-unambiguous true
 zstyle ':completion:*' add-space true
 zstyle ':completion:*:processes' command 'ps -xuf'
@@ -25,6 +24,13 @@ zstyle ':completion:*' substitute 1
 zstyle ':completion:*' use-compctl true
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' word true
+
+_force_rehash()
+{
+    (( CURRENT == 1 )) && rehash
+    return 1
+}
+zstyle ':completion:*' completer _force_rehash _complete _list _oldlist _expand _ignored _match _correct _approximate _prefix
 
 # system users
 zstyle ':completion:*:*:*:users' ignored-patterns \
