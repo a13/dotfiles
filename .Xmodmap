@@ -1,8 +1,13 @@
+! -*-	mode: conf-xdefaults;	-*-
+
+! MS NEK4000
 keycode 192 = F15
 keycode 193 = F16
 keycode 194 = F17
 keycode 195 = F18
 keycode 196 = F19
+! RAlt switches layout, but for 3rd group (emacs) send F13/F14 (to use internal switcher)
 keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14
+! wtf?
 keycode 63 = KP_Multiply NoSymbol KP_Multiply NoSymbol
 keycode 106 = KP_Divide NoSymbol KP_Divide NoSymbol

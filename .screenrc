@@ -1,3 +1,4 @@
+# -*-	mode: conf;	-*-
 #term screen-256color-s
 
 # Отключение стартового сообщения
@@ -8,8 +9,7 @@ defscrollback 10240
 autodetach on
 # use visual bell
 vbell on
-# Заменить ctrl-A на ctrl-O
-#escape ^Oo 
+
 caption always "%{wK}Screen: %n | %h %=%t  %{=w G} %D %d %M %c"
 #hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 
@@ -91,6 +91,5 @@ vbell off
 
 # Shift PgUp/PgDn scrolling
 termcapinfo rxvt-unicode ti@:te@
-
 
 bind b eval "writebuf" "exec sh -c 'xsel < /tmp/screen-exchange'"
