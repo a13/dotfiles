@@ -2,6 +2,8 @@
 
 export QT_GRAPHICSSYSTEM=raster
 
+sh ~/.jackdrc 2>/dev/null &
+
 test -f ~/.wallpaper \
     && feh --no-xinerama --bg-scale ~/.wallpaper \
     || xsetroot -solid black
@@ -22,4 +24,4 @@ xset b 40 8000 15
     pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
 
-lxpanel &
+lxpanelx --colormap system &
