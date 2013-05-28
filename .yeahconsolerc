@@ -35,3 +35,4 @@ yeahconsole*savelines: 10000
 yeahconsole*toolBar: false
 ! используемый терминал - должен поддерживать те же параметры командной строки что и xterm/rxvt
 yeahconsole*term: urxvtcd
+

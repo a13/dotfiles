@@ -116,8 +116,17 @@
 ;;  (0 t nil :class "Konqueror" :role "...konqueror-mainwindow")
 ;;  (1 t nil :class "XTerm"))
 
-(run-commands "grename ws-default" "gnewbg ws-web" "gnewbg ws-im" "gnewbg ws-mail" "gnewbg ws-media" "gnewbg ws-virtual" "gnewbg ws-remote")
-;;(run-shell-command "xxkb" )
+(grename "ws-default")
+(mapc #'gnewbg
+      '("ws-default"
+        "ws-web"
+        "ws-im"
+        "ws-mail"
+        "ws-media"
+        "ws-virtual"
+        "ws-remote"))
+(gnewbg-float "ws-float")
+
 (define-frame-preference "ws-im"
     (0 t t :title "mcabber")
     (1 t t :title "Tkabber"))
@@ -125,7 +134,7 @@
 ;;  (2 t t :class "psi" :role "ChatDlg"))
 (define-frame-preference "ws-web"
     (0 t t :class "Chromium"))
-  
+
   
 
 ;(define-frame-preference "Ardour"

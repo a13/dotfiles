@@ -12,7 +12,7 @@ Xft.dpi: 120.0
 ! Xft.hinting:    (bool)// FC_HINTING  Whether the rasterizer should use hinting
 Xft.hinting: true
 ! Xft.hintstyle:  (int) // FC_HINT_STYLE Automatic hinting style - hintnone hintslight hintmedium hintfull
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintnone
 ! Xft.rgba:       (int) // FC_RGBA unknown, rgb, bgr, vrgb, vbgr, none - subpixel geometry
 Xft.rgba: none 
 ! Xft.lcdfilter   (int) // FC_LCD_FILTER type of lcd filter to use - lcdnone lcddefault lcdlight lcdlegacy
@@ -22,6 +22,7 @@ Xft.lcdfilter: lcddefault
 ! Xft.render (bool) // XFT_RENDER
 ! Xft.embolden (bool) // FC_EMBOLDEN true if emboldening needed
 ! Xft.autohint (bool) // FC_AUTOHINT Use autohinter instead of normal hinter
+Xft.autohint: false
 ! Xft.minspace (bool) // FC_MINSPACE use minimum line spacing
 ! Xft.maxglyphmemory (int) // XFT_MAX_GLYPH_MEMORY 
 
@@ -41,7 +42,7 @@ Xft.lcdfilter: lcddefault
 #endif
 
 #ifndef XFTFONT
-# define XFTFONT Lucida Grande-9
+# define XFTFONT Lucida Grande-8
 #endif
 
 #include ".urxvtrc" 
@@ -214,7 +215,7 @@ XTerm*tekMenu*foreground:            white
 
 !Tkabber*Font:   Verdana 9
 !Vkeybd*Font:   Verdana 9
-*tkTheme: tile
+*tkTheme: clam
 
 ! *vt100.translations: #override \n\
 !         Ctrl ~Shift <Key>Tab: string(0x1b) string("[27;5;9~") \n \

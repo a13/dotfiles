@@ -7,6 +7,8 @@
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
+export LC_NUMERIC="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -20,3 +22,11 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "/usr/lib/ccache" ] ; then
+    PATH="/usr/lib/ccache:$PATH"
+fi
+
+
+ulimit -n 8192

@@ -90,3 +90,4 @@
 ;; <print>
 ;; <XF86AudioPlay>
 (xbindkey '(XF86AudioPlay) "apctl.sh toggle")
+
