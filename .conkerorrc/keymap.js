@@ -1,5 +1,4 @@
 //keybindings 
-
 ru = decodeURIComponent(escape('ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'));
 en = '`qwertyuiop[]asdfghjkl;\'zxcvbnm,.~QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>';
 
@@ -73,5 +72,9 @@ user_pref("conkeror.load.bindings/default/bindings", 0);
 // but load after
 require("bindings/default/bindings");
 
-
+// more universal keys
 define_key(default_global_keymap, "C-x C-f", "find-url-new-window");
+define_key(text_keymap, 'C-w', 'cmd_deleteWordBackward');
+define_key(text_keymap, 'C-h', 'cmd_deleteCharBackward');
+require("global-overlay-keymap.js");
+define_key_alias("C-m", "return");
