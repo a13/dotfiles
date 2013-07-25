@@ -1,5 +1,7 @@
 homepage = "about:blank";
 
+require("daemon");
+
 url_completion_use_history = true;
 
 editor_shell_command = "emacsclient -c";
@@ -18,4 +20,4 @@ add_hook("before_quit_hook",
          });
 
 cwd = make_file("/tmp/downloads");
-set_user_agent('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:20.0) Gecko/20100101 Firefox/20.0');
+set_user_agent('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:22.0) Gecko/20100101 Firefox/22.0');

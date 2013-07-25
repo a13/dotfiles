@@ -40,4 +40,5 @@ xset b 40 8000 15
 }
 
 lxpanelx --colormap system &
-$HOME/bin/stumpwm
+test -z $_LXSESSION_PID && $HOME/bin/stumpwm
+

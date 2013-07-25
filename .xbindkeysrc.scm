@@ -30,6 +30,7 @@
 (xbindkey '(mod4 l) "xscreensaver-command -lock || (xscreensaver -no-splash & xscreensaver-command -lock)")
 (xbindkey '(mod4 t) xterm)
 (xbindkey '(mod4 e) "emacsclient -c -a \"\"")
+(xbindkey '(mod4 j) "emacsclient -c --eval \"(call-interactively 'jabber-chat-with)\"")
 
 (xbindkey '(Print) "scrot /tmp/scrot.png")
 (xbindkey '(Shift Print) "scrot -s /tmp/scrot.png")
