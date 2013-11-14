@@ -48,3 +48,7 @@ define_key_alias("C-m", "return");
 // hinting
 hints_auto_exit_delay=250;
 hints_ambiguous_auto_exit_delay=750;
+
+// middle click
+require('clicks-in-new-buffer');
+clicks_in_new_buffer_target=OPEN_NEW_WINDOW;
