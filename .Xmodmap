@@ -8,6 +8,8 @@ keycode 195 = F18
 keycode 196 = F19
 ! RAlt switches layout, but for 3rd group (emacs) send F13/F14 (to use internal switcher)
 keysym Alt_R = ISO_Last_Group ISO_First_Group ISO_First_Group ISO_Last_Group F13 F14
+! Menu as ISO_Level3_Shift/Multi_Key 
+keysym Menu = ISO_Level3_Shift Multi_key ISO_Level3_Shift Multi_key ISO_Level3_Shift Multi_key 
 ! wtf?
 keycode 63 = KP_Multiply NoSymbol KP_Multiply NoSymbol
 keycode 106 = KP_Divide NoSymbol KP_Divide NoSymbol

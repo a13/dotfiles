@@ -1,5 +1,7 @@
 #!/bin/sh
 
+eval $(gpg-agent --daemon)
+
 export XCURSOR_THEME=Obsidian
 export XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
 export QT_PLUGIN_PATH=$HOME/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
@@ -23,11 +25,13 @@ pgrep yeahconsole >>/dev/null || yeahconsole &
 # keyboard
 xxkb &
 # reset all
-setxkbmap us -option 
-# english, russian, emacs, caps -> ctrl, menu as compose key
-setxkbmap us,ru,us -option "ctrl:nocaps,compose:menu"
+setxkbmap us -option
+# english, russian, emacs
+# Caps Lock as Ctrl, Both Shift-Keys together toggle Caps Lock, Enable extra typographic characters
+setxkbmap us,ru,us -option "ctrl:nocaps,shift:both_capslock,misc:typo"
 # libX11 workaround :(
 xkbcomp $DISPLAY - | egrep -v "group . = AltGr;" | xkbcomp - $DISPLAY
+# remap some keys
 xmodmap ~/.Xmodmap
 xbindkeys
 # nice beep
@@ -39,6 +43,6 @@ xset b 40 8000 15
 #    pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
 
-lxpanelx --colormap system &
+#lxpanelx --colormap system &
 test -z $_LXSESSION_PID && $HOME/bin/stumpwm
 
