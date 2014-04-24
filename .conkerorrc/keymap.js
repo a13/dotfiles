@@ -45,6 +45,8 @@ define_key(text_keymap, 'C-h', 'cmd_deleteCharBackward');
 require("global-overlay-keymap.js");
 define_key_alias("C-m", "return");
 
+define_key(text_keymap, "C-x C-e", "edit-current-field-in-external-editor");
+
 // hinting
 hints_auto_exit_delay=250;
 hints_ambiguous_auto_exit_delay=750;

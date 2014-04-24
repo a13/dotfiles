@@ -23,6 +23,12 @@ define_webjump("lastfm-label", "http://www.last.fm/search?m=label&q=%s");
 // github
 define_webjump("github", "http://github.com/search?q=%s&type=Everything");
 
+// yandex
+define_webjump("mapy", "http://maps.yandex.ru/?text=%s");
+define_webjump("market", "http://market.yandex.ru/search.xml?text=%s");
+
+
+
 
 //// taken from http://retroj.net/git/conkerorrc
 
