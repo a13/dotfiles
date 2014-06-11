@@ -35,6 +35,7 @@ alias u='sudo apt-get update'
 alias i='sudo aptitude install'
 alias d='sudo aptitude purge'
 alias l='dpkg -l'
+alias L='dpkg -L'
 alias s='aptitude search'
 alias p='ps aux'
 alias spst="curl -F 'sprunge=<-' http://sprunge.us"
