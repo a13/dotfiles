@@ -8,16 +8,16 @@ local -A smile
 local _time _path _tail _inputfmt _namehost _smile
 
 # generate unique prompt colors (0-7) from user@hostname hash
-colors=$(echo `whoami`@`hostname` | md5sum |  hexdump -v -e '/1 "%04o"' | sed 's/./&\n/g' | awk ' !x[$0]++' | tail -4 | xargs)
+colors=$(echo $USER@$HOST | md5sum |  hexdump -v -e '/1 "%04o"' | sed 's/./&\n/g' | awk ' !x[$0]++' | tail -4 | xargs)
 clr=("${(s/ /)colors}")
 # clr[1]=${1:-'red'}
 # clr[2]=${2:-'cyan'}
 # clr[3]=${3:-'green'}
 # clr[4]=${4:-'yellow'}
-# hardcoded
 clr[5]=${5:-'white'}
-clr[6]=${6:-'green'}
-clr[7]=${7:-'red'}
+clr[6]=${6:-'white'}
+clr[7]=${7:-'green'}
+clr[8]=${8:-'red'}
 
 pc['\[']="%F{$clr[1]}["
 pc['\]']="%F{$clr[1]}]"
@@ -29,12 +29,12 @@ pc['gs']="%F{clr[1]}-"
  
 POSTEDIT="$reset_color"
  
-_time=$pc['\[']%B%F{$clr[3]}%*%b%f$pc['\]']
-_path=$pc['\[']%B%F{$clr[4]}%~%(1/./.)%b%f$pc['\]']
+_time=$pc['\[']%B%F{$clr[4]}%*%b%f$pc['\]']
+_path=$pc['\[']%B%F{$clr[3]}%~%(1/./.)%b%f$pc['\]']
 _tail="%F{$clr[2]}:\>%b%f"
-_inputfmt=%F{$clr[5]}
+_inputfmt=%F{$clr[6]}
 _namehost=%F{$clr[5]}%n@%m
-_smile=%(?.%F{$clr[6]}:\).%F{$clr[7]}:\()%f
+_smile=%(?.%F{$clr[7]}:\).%F{$clr[8]}:\()%f
  
 prompt="$_time $_path 
 $_namehost $_tail $_inputfmt"

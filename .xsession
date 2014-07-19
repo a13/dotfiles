@@ -1,5 +1,9 @@
 #!/bin/sh
 
+<<<<<<< HEAD
+=======
+eval $(gpg-agent --daemon)
+>>>>>>> 01c2f442d1c76423316abc465db5c0faf68648ce
 
 export XCURSOR_THEME=Obsidian
 export XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
@@ -26,11 +30,13 @@ pgrep yeahconsole >>/dev/null || yeahconsole &
 # keyboard
 xxkb &
 # reset all
-setxkbmap us -option 
-# english, russian, emacs, caps -> ctrl, menu as compose key
-setxkbmap us,ru,us -option "ctrl:nocaps,compose:menu"
+setxkbmap us -option
+# english, russian, emacs
+# Caps Lock as Ctrl, Both Shift-Keys together toggle Caps Lock, Enable extra typographic characters
+setxkbmap us,ru,us -option "ctrl:nocaps,shift:both_capslock,misc:typo"
 # libX11 workaround :(
 xkbcomp $DISPLAY - | egrep -v "group . = AltGr;" | xkbcomp - $DISPLAY
+# remap some keys
 xmodmap ~/.Xmodmap
 xbindkeys
 # nice beep
@@ -41,7 +47,14 @@ xset b 40 8000 15
     synclient RightEdge=800
 #    pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
+<<<<<<< HEAD
 lxpanelx --colormap system &
 #lxpanel &
 #lxqt-panel &
 $HOME/bin/stumpwm
+=======
+
+#lxpanelx --colormap system &
+test -z $_LXSESSION_PID && $HOME/bin/stumpwm
+
+>>>>>>> 01c2f442d1c76423316abc465db5c0faf68648ce

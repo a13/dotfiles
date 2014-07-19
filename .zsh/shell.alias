@@ -13,17 +13,6 @@ alias du='du -h'
 
 alias ec='emacsclient -c -a ""'
 alias eda='emacs --daemon'
-#alias -s {jpg,gif,bmp,png,xpm}=geeqie
-#alias -s {mp3,ogg,wav,avi,flac,mpeg,mpg,mov,m2v,wmv}=mplayer
-#alias -s {txt,h,c,cpp,cc,conf,4th,diff}=$EDITOR
-#alias -s {odt,doc,xls,sxw,rtf}=abiword
-#alias -s xls=gnumeric
-#alias -s pdf=xpdf
-#alias -s chm=xchm
-#alias -s djvu=djview
-
-#autoload -U pick-web-browser
-#alias -s {html,htm}=pick-web-browser
 alias screenize="screen -d -m sh -c"
 if [ -x /usr/bin/grc ]; then
 	alias diff="grc --colour=auto diff"
@@ -46,5 +35,20 @@ alias u='sudo apt-get update'
 alias i='sudo aptitude install'
 alias d='sudo aptitude purge'
 alias l='dpkg -l'
+alias L='dpkg -L'
 alias s='aptitude search'
 alias p='ps aux'
+alias spst="curl -F 'sprunge=<-' http://sprunge.us"
+
+# zsh specific
+#alias -s {jpg,gif,bmp,png,xpm}=geeqie
+#alias -s {mp3,ogg,wav,avi,flac,mpeg,mpg,mov,m2v,wmv}=mplayer
+#alias -s {txt,h,c,cpp,cc,conf,4th,diff}=$EDITOR
+#alias -s {odt,doc,xls,sxw,rtf}=abiword
+#alias -s xls=gnumeric
+#alias -s pdf=xpdf
+#alias -s chm=xchm
+#alias -s djvu=djview
+
+#autoload -U pick-web-browser
+#alias -s {html,htm}=pick-web-browser

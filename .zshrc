@@ -33,7 +33,7 @@ source ~/.zsh/shell.alias
 preexec() {
         [[ -t 1 ]] || return
         case $TERM in
-                *xterm*|*rxvt|(dt|k|E)term*) print -Pn "\e]2;<$1> [%~]\a"
+                *xterm*|*rxvt*|(dt|k|E)term*) print -Pn "\e]2;<$1> [%~]\a"
                 ;;
         esac
 }
@@ -60,12 +60,18 @@ setopt  No_Beep
 
 #[[ $EMACS = t ]] && unsetopt zle
 
-if [ "$TERM" = "dumb" ]
-then
-  unsetopt zle
-  unsetopt prompt_cr
-  unsetopt prompt_subst
-  unfunction precmd
-  unfunction preexec
-  PS1='$ '
-fi
+case "$TERM" in
+    dumb)
+        unsetopt zle
+        unsetopt prompt_cr
+        unsetopt prompt_subst
+        unfunction precmd
+        unfunction preexec
+        PS1='$ '
+        ;;        
+    screen*)
+        ;;
+    *)
+        screen
+        ;;
+esac

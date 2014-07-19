@@ -22,3 +22,9 @@ nth()
 {
     awk "{print \$$1}"
 }
+
+pst()
+{
+    tmp=`mktemp`
+    less <&0 > $tmp
+}    
