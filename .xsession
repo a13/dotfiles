@@ -1,9 +1,11 @@
 #!/bin/sh
 
+
 export XCURSOR_THEME=Obsidian
 export XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
 export QT_PLUGIN_PATH=$HOME/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
 export QT_GRAPHICSSYSTEM=raster
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 # for Gtk+ theme
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 #export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:$HOME/.gtkrc-2.0::$HOME/.kde/share/config/gtkrc-2.0
@@ -12,11 +14,12 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export LC_MESSAGES=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
 
-sh ~/.jackdrc 2>/dev/null &
+#sh ~/.jackdrc 2>/dev/null &
 
-test -f ~/.wallpaper \
-    && feh --no-xinerama --bg-scale ~/.wallpaper \
-    || xsetroot -solid black
+#test -f ~/.wallpaper \
+#    && feh --no-xinerama --bg-scale ~/.wallpaper \
+#    || xsetroot -solid black
+feh --no-xinerama --bg-scale ~/.wallpaper & 
 
 pgrep yeahconsole >>/dev/null || yeahconsole &
 
@@ -38,6 +41,7 @@ xset b 40 8000 15
     synclient RightEdge=800
 #    pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
-
 lxpanelx --colormap system &
+#lxpanel &
+#lxqt-panel &
 $HOME/bin/stumpwm
