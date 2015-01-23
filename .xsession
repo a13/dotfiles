@@ -1,9 +1,5 @@
 #!/bin/sh
 
-<<<<<<< HEAD
-=======
-eval $(gpg-agent --daemon)
->>>>>>> 01c2f442d1c76423316abc465db5c0faf68648ce
 
 export XCURSOR_THEME=Obsidian
 export XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share
@@ -47,14 +43,7 @@ xset b 40 8000 15
     synclient RightEdge=800
 #    pgrep batcontrol.sh >>/dev/null || ~/bin/batcontrol.sh &
 }
-<<<<<<< HEAD
 lxpanelx --colormap system &
 #lxpanel &
 #lxqt-panel &
-$HOME/bin/stumpwm
-=======
-
-#lxpanelx --colormap system &
 test -z $_LXSESSION_PID && $HOME/bin/stumpwm
-
->>>>>>> 01c2f442d1c76423316abc465db5c0faf68648ce
