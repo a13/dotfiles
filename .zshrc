@@ -68,6 +68,14 @@ case "$TERM" in
         unfunction precmd
         unfunction preexec
         PS1='$ '
+        ;;
+    eterm-color)
+#        unsetopt zle
+#        unsetopt prompt_cr
+#        unsetopt prompt_subst
+        unfunction precmd
+        unfunction preexec
+        RPS1=''
         ;;        
     screen*)
         ;;

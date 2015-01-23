@@ -24,12 +24,12 @@ feh --no-xinerama --bg-scale ~/.wallpaper &
 pgrep yeahconsole >>/dev/null || yeahconsole &
 
 # keyboard
-xxkb &
+# xxkb &
 # reset all
 setxkbmap us -option
 # english, russian, emacs
 # Caps Lock as Ctrl, Both Shift-Keys together toggle Caps Lock, Enable extra typographic characters
-setxkbmap us,ru,us -option "ctrl:nocaps,shift:both_capslock,misc:typo"
+setxkbmap us+typo,ru,us -option "ctrl:nocaps,shift:both_capslock" -variant ",ruu,"
 # libX11 workaround :(
 xkbcomp $DISPLAY - | egrep -v "group . = AltGr;" | xkbcomp - $DISPLAY
 # remap some keys
