@@ -79,6 +79,9 @@ case "$TERM" in
         ;;        
     screen*)
         ;;
+    xterm)
+        test -z "$SSH_CLIENT" && screen
+        ;;
     *)
         screen
         ;;
