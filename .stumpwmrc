@@ -125,13 +125,9 @@
         "ws-media"
         "ws-virtual"
         "ws-remote"))
+
 (gnewbg-float "ws-float")
 
-(define-frame-preference "ws-im"
-    (0 t t :title "mcabber")
-    (1 t t :title "Tkabber"))
-;;  (2 t t :class "psi")
-;;  (2 t t :class "psi" :role "ChatDlg"))
 (define-frame-preference "ws-web"
     (0 t t :class "Chromium"))
 
