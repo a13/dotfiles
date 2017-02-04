@@ -50,9 +50,9 @@
 
 ;; Message window font
 ;;(set-font "-xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1")
-(set-font "-*-terminus-medium-r-*-*-14-*-*-*-*-*-iso10646-1")
+(set-font "-*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1")
 ;;(set-font "-*-doslike-normal-*-*-*-*-180-75-75-*-*-*-*")
-;;(set-font "-*-monaco-*-*-*-*-12-*-*-*-*-*-iso10646-*")
+;;(set-font "-misc-monaco-medium-r-normal--0-0-0-0-p-0-iso10646-1")
 ;(set-frame-outline-width 1)
 ;;(set-focus-color "gray26")
 (set-focus-color "CornflowerBlue")
@@ -74,15 +74,9 @@
 ;;  (unless (group-windows (current-group))
 ;;    (gkill)))
 (setf *mode-line-position* :top)
-;; enable tray;
-;;(ql:quickload "xembed")
-;;(load-module "stumptray")
-;;(stumptray:add-mode-line-hooks)
-
-
 ;; Turn on the modeline
-;; (if (not (head-mode-line (current-head)))
-;;     (toggle-mode-line (current-screen) (current-head)))
+;;(if (not (head-mode-line (current-head)))
+  ;;  (toggle-mode-line (current-screen) (current-head)))
 
 
 ;; Show the time in the modeline
@@ -92,10 +86,12 @@
 (setf *mode-line-pad-y* 1)
 
 (setf stumpwm:*screen-mode-line-format*
-    (list "^3*" '(:eval (stumpwm:run-shell-command "date '+%R' | xargs echo -n" t)) "^n^b" '(:eval (window-user-title (current-window))) " [^B%n^b] %W  ^B^07" "^n^b"))
+    (list "[^B%n^b] %W | ^B^07"
+        '(:eval (stumpwm:run-shell-command "date '+%R' | xargs echo -n" t)) "^n^b"))
 ;; (setf *screen-mode-line-format*
 ;;       (list "^6*::^n  %g  ^6*::^n%w^6* :: ^8*CPU: ^n%f %C ^3*%t ^6*:: ^n^r%M ^6*:: ^n%b ^6*:: ^n %l ^6*::^8* - "
 ;; 	    '(:eval (run-shell-command "date +\"%T %d-%m-%Y\" | tr -d '[:cntrl:]'" t))))
+
 
 
 ;(setf *mode-line-screen-position* :bottom)
@@ -134,6 +130,8 @@
 
 (define-frame-preference "ws-web"
     (0 t t :class "Chromium"))
+
+  
 
 ;(define-frame-preference "Ardour"
 ;  (0 t   t   :instance "ardour_editor" :type :normal)
@@ -175,5 +173,3 @@
 (defcommand-pm reboot "Reboot")
 (defcommand-pm shutdown "Shutdown")
 ;;(resize-head 0 24 0 1000 600)
-
-(setf *mouse-focus-policy* :click)
