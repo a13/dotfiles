@@ -1,10 +1,10 @@
 (define (aosd-echo text)
   (let ((osdcmd "aosd_cat -x 0 -y 0 -t 2 -p 1 -n Consolas\\ 22 -f 100 -u 2000 -o 200 -R white -l 5"))
     (run-command (string-append "echo $@ " text "|" osdcmd))))
- 
+
 (define (run-and-osd keys cmd osd-text)
   (xbindkey-function keys
-                     (lambda () 
+                     (lambda ()
                        (run-command cmd)
                        (aosd-echo osd-text))))
 
@@ -20,12 +20,14 @@
 
 (bind-switch-to-desk 7)
 
-(define xterm "urxvtcd") 
+(define xterm "urxvtcd")
 (define sleep-command "dbus-send --system --print-reply --dest=\"org.freedesktop.UPower\" /org/freedesktop/UPower org.freedesktop.UPower.Suspend")
 
 ;; misc commands
 (xbindkey '(mod4 r) "/home/dk/bin/rundmenu")
-(xbindkey '(mod4 w) "/home/dk/bin/windmenu xwin xdesk ebuf")
+(xbindkey '(mod4 w) "/home/dk/bin/windmenu xwin ebuf xdesk")
+(xbindkey '(mod4 h) "/home/dk/bin/webjump.sh conkeror")
+(xbindkey '(mod4 m) "/home/dk/bin/dxmmenu")
 (xbindkey '(mod4 b) "x-www-browser")
 (xbindkey '(mod4 l) "xscreensaver-command -lock || (xscreensaver -no-splash & xscreensaver-command -lock)")
 (xbindkey '(mod4 t) xterm)
@@ -68,27 +70,26 @@
 ;; Fn+Left - XF86AudioLowerVolume
 (xbindkey '(XF86AudioLowerVolume) "amixer set Master 1-")
 
-(xbindkey '(mod4 XF86AudioRaiseVolume) "apctl.sh next") 
-(xbindkey '(mod4 XF86AudioLowerVolume) "apctl.sh prev")
+(xbindkey '(mod4 XF86AudioRaiseVolume) "xmms2 next")
+(xbindkey '(mod4 XF86AudioLowerVolume) "xmms2 prev")
 
-(xbindkey '(mod4 XF86MonBrightnessDown) "apctl.sh toggle")
-(xbindkey '(mod4 XF86MonBrightnessUp) "apctl.sh toggle")
+(xbindkey '(mod4 XF86MonBrightnessDown) "xmms2 toggle")
+(xbindkey '(mod4 XF86MonBrightnessUp) "xmms2 toggle")
 
 ;; misc multimedia keys
 ;; <XF86HomePage>
 (xbindkey '(XF86HomePage) "x-www-browser")
-;; <XF86Search> 
-;; <XF86Mail> 
-;; <XF86Favorites> 
-;; <XF86Calculator> 
-;; <XF86New> 
-;; <SunOpen> 
-;; <XF86Close> 
-;; <XF86Reply> 
-;; <XF86MailForward> 
+;; <XF86Search>
+;; <XF86Mail>
+;; <XF86Favorites>
+;; <XF86Calculator>
+;; <XF86New>
+;; <SunOpen>
+;; <XF86Close>
+;; <XF86Reply>
+;; <XF86MailForward>
 ;; <XF86Send>
 ;; <XF86Save>
 ;; <print>
 ;; <XF86AudioPlay>
 (xbindkey '(XF86AudioPlay) "apctl.sh toggle")
-
