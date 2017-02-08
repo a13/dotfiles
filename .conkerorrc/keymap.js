@@ -1,18 +1,17 @@
-//keybindings 
+//keybindings
 function tr (seq) {
-    ru = decodeURIComponent(escape('ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'));
-    en = '`qwertyuiop[]asdfghjkl;\'zxcvbnm,.~QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>';
+    let ru = decodeURIComponent(escape('ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'));
+    let en = '`qwertyuiop[]asdfghjkl;\'zxcvbnm,.~QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>';
     function e2r (ch) {
-        let (idx = en.indexOf(ch)) {
-            return (idx == -1)? ch : ru[idx];
-        }
+        let idx = en.indexOf(ch);
+        return (idx == -1)? ch : ru[idx];
     }
 
-    var nseq = [];
+    let nseq = [];
     seq.forEach(
         function (tmp) {
             if (typeof tmp == "string") {
-                var m = tmp.match(/^(M-|)(.)$/);
+                let m = tmp.match(/^(M-|)(.)$/);
                 if (m)
                     nseq.push(m[1] + e2r(m[2]));
                 else
