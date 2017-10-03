@@ -66,7 +66,7 @@
 (setf *suppress-frame-indicator* nil)
 (setf *normal-border-width* 1)
 (setf *window-border-style* :thin)
-(setf *mouse-focus-policy* :sloppy)
+(setf *mouse-focus-policy* :click)
 ;; change window numbers
 ;; (setf *frame-number-map* "1234567890")
 ;;(defun kill-empty-group-hook (win)
@@ -131,7 +131,7 @@
 (define-frame-preference "ws-web"
     (0 t t :class "Chromium"))
 
-  
+
 
 ;(define-frame-preference "Ardour"
 ;  (0 t   t   :instance "ardour_editor" :type :normal)
@@ -161,7 +161,7 @@
 (define-key *top-map* (kbd "C-M-h") "move-window left")
 
 ;;(defparameter *dbus-power-template* "dbus-send --system --print-reply --dest=\"org.freedesktop.Hal\" /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement." )
-(defparameter *dbus-power-template* 
+(defparameter *dbus-power-template*
   "dbus-send --system --print-reply --dest=\"org.freedesktop.UPower\" /org/freedesktop/UPower org.freedesktop.UPower." )
 
 (defmacro defcommand-pm (name command)

@@ -25,18 +25,14 @@ feh --no-xinerama --bg-scale ~/.wallpaper &
 pgrep yeahconsole >>/dev/null || yeahconsole &
 
 # keyboard
-# xxkb &
-# reset all
-setxkbmap us -option
-# english, russian, emacs
-# Caps Lock as Ctrl, Both Shift-Keys together toggle Caps Lock, Enable extra typographic characters
-# setxkbmap us+typo,ru -option "ctrl:nocaps,shift:both_capslock" -variant ",ruu"
 # experimental layout
-setxkbmap us -option; setxkbmap us+typo+"modifiers(rctl_switch_multikey)+c720(swapwin)+c720(fn_keys)+c720(editing)",rup -option "ctrl:nocaps,shift:both_capslock,grp:toggle,nbsp:level4"  -print | xkbcomp -I"$HOME/.xkb" - "$DISPLAY"
-# libX11 workaround :(
-xkbcomp $DISPLAY - | egrep -v "group . = AltGr;" | xkbcomp - $DISPLAY
+if lsusb  | grep -q "045e:00db"
+then
+    setxkbmap us -option; setxkbmap us+typo+"modifiers(menu_switch_multikey)",rup -option "ctrl:nocaps,shift:both_capslock,grp:toggle,nbsp:level4"  -print | egrep -v "group . = AltGr;" | xkbcomp -I"$HOME/.xkb" - "$DISPLAY"
+else
+    setxkbmap us -option; setxkbmap us+typo+"modifiers(rctl_switch_multikey)+c720(swapwin)+c720(fn_keys)+c720(editing)",rup -option "ctrl:nocaps,shift:both_capslock,grp:toggle,nbsp:level4"  -print | egrep -v "group . = AltGr;" | xkbcomp -I"$HOME/.xkb" - "$DISPLAY"
+fi
 # remap some keys
-# xmodmap ~/.Xmodmap
 xbindkeys
 # nice beep
 xset b 40 8000 15

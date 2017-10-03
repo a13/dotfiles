@@ -76,13 +76,13 @@ case "$TERM" in
         unfunction precmd
         unfunction preexec
         RPS1=''
-        ;;        
+        ;;
     screen*)
         ;;
     xterm)
-        test -z "$SSH_CLIENT" && screen
+        test -z "$SSH_CLIENT" && tmux
         ;;
     *)
-        screen
+        tmux
         ;;
 esac

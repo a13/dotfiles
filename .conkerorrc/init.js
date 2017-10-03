@@ -19,9 +19,8 @@ add_hook("before_quit_hook",
              yield co_return(result);
          });
 
-set_user_agent('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:25.0) Gecko/20100101 Firefox/25.0');
+set_user_agent('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0');
 
 cwd = make_file("/tmp/downloads");
 download_buffer_automatic_open_target = OPEN_NEW_BUFFER_BACKGROUND;
-
-
+user_pref("network.standard-url.escape-utf8", false);

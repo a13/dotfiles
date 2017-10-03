@@ -1,3 +1,6 @@
+;; (use-modules (system repl server))
+;; (spawn-server)
+
 (define (aosd-echo text)
   (let ((osdcmd "aosd_cat -x 0 -y 0 -t 2 -p 1 -n Consolas\\ 22 -f 100 -u 2000 -o 200 -R white -l 5"))
     (run-command (string-append "echo $@ " text "|" osdcmd))))
@@ -92,4 +95,6 @@
 ;; <XF86Save>
 ;; <print>
 ;; <XF86AudioPlay>
-(xbindkey '(XF86AudioPlay) "apctl.sh toggle")
+(xbindkey '(XF86AudioPlay) "xmms2 toggle")
+(xbindkey '(XF86Mail) "icedove")
+(xbindkey '(XF86Search) "x-www-browser")
