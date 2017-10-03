@@ -15,7 +15,7 @@ export LC_MESSAGES=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
 
 xrdb -load ~/.Xresources
-sh ~/.jackdrc 2>/dev/null &
+# sh ~/.jackdrc 2>/dev/null &
 
 #test -f ~/.wallpaper \
 #    && feh --no-xinerama --bg-scale ~/.wallpaper \
