@@ -30,7 +30,7 @@ if lsusb  | grep -q "045e:00db"
 then
     setxkbmap us -option; setxkbmap us+typo+"modifiers(menu_switch_multikey)",rup -option "ctrl:nocaps,shift:both_capslock,grp:toggle,nbsp:level4"  -print | egrep -v "group . = AltGr;" | xkbcomp -I"$HOME/.xkb" - "$DISPLAY"
 else
-    setxkbmap us -option; setxkbmap us+typo+"modifiers(rctl_switch_multikey)+c720(swapwin)+c720(fn_keys)+c720(editing)",rup -option "ctrl:nocaps,shift:both_capslock,grp:toggle,nbsp:level4"  -print | egrep -v "group . = AltGr;" | xkbcomp -I"$HOME/.xkb" - "$DISPLAY"
+    setxkbmap us -option; setxkbmap us+typo+"modifiers(rctl_switch_multikey)+c720(swapwin)+c720(fn_keys)+c720(editing)",rup -option "shift:both_capslock,grp:toggle,nbsp:level4"  -print | egrep -v "group . = AltGr;" | xkbcomp -I"$HOME/.xkb" - "$DISPLAY"
 fi
 # remap some keys
 xbindkeys
