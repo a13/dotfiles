@@ -50,7 +50,7 @@
 
 ;; Message window font
 ;;(set-font "-xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1")
-(set-font "-*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1")
+(set-font "-*-terminus-medium-r-*-*-24-*-*-*-*-*-iso10646-1")
 ;;(set-font "-*-doslike-normal-*-*-*-*-180-75-75-*-*-*-*")
 ;;(set-font "-misc-monaco-medium-r-normal--0-0-0-0-p-0-iso10646-1")
 ;(set-frame-outline-width 1)
@@ -98,10 +98,23 @@
 ;(setf *mode-line-frame-position* :bottom)
 ;;(add-hook *destroy-window-hook* 'kill-empty-group-hook)
 
+(grename "ws-default")
+(mapc #'gnewbg
+      '("ws-default"
+        "ws-web"
+        "ws-im"
+        "ws-mail"
+        "ws-media"
+        "ws-calls"
+        "ws-virtual"
+        "ws-remote"))
+
+(gnewbg-float "ws-float")
+
 ;;; Define window placement policy...
 
 ;; Clear rules
-(clear-window-placement-rules)
+
 
 ;; Last rule to match takes precedence!
 
@@ -111,45 +124,20 @@
 ;; restored from *data-dir*/create file.
 ;; TIP: if the :restore flag is set then group dump is restored even for an
 ;; existing group using *data-dir*/restore file.
-;;(define-frame-preference "Default"
 ;; frame raise lock (lock AND raise == jumpto)
-;;  (0 t nil :class "Konqueror" :role "...konqueror-mainwindow")
-;;  (1 t nil :class "XTerm"))
+(clear-window-placement-rules)
+(define-frame-preference "ws-calls"
+  (0 T T :CLASS "Chromium-browser" :INSTANCE "meet.google.com.+" :ROLE "pop-up"))
 
-(grename "ws-default")
-(mapc #'gnewbg
-      '("ws-default"
-        "ws-web"
-        "ws-im"
-        "ws-mail"
-        "ws-media"
-        "ws-virtual"
-        "ws-remote"))
+(define-frame-preference "ws-calls"
+  (0 T T :CLASS "Chromium-browser" :TITLE "Meet.*"
+     :ROLE "pop-up"))
 
-(gnewbg-float "ws-float")
-
-(define-frame-preference "ws-web"
-    (0 t t :class "Chromium"))
+(define-frame-preference "ws-im"
+  (0 T T :CLASS "Chromium-browser" :INSTANCE "web.telegram.org"))
 
 
 
-;(define-frame-preference "Ardour"
-;  (0 t   t   :instance "ardour_editor" :type :normal)
-;  (0 t   t   :title "Ardour - Session Control")
-;  (0 nil nil :class "XTerm")
-;  (1 t   nil :type :normal)
-;  (1 t   t   :instance "ardour_mixer")
-;  (2 t   t   :instance "jvmetro")
-;  (1 t   t   :instance "qjackctl")
-;  (3 t   t   :instance "qjackctl" :role "qjackctlMainForm"))
-
-;(define-frame-preference "Shareland"
-;  (0 t   nil :class "XTerm")
-;  (1 nil t   :class "aMule"))
-
-;(define-frame-preference "Emacs"
-;  (1 t t :restore "emacs-editing-dump" :title "...xdvi")
-;  (0 t t :create "emacs-dump" :class "Emacs"))
 (define-key *top-map* (kbd "M-k") "move-focus up")
 (define-key *top-map* (kbd "M-j") "move-focus down")
 (define-key *top-map* (kbd "M-l") "move-focus right")
