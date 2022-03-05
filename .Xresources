@@ -4,17 +4,17 @@
 
 !! Fonts settings
 ! http://www.freedesktop.org/wiki/ScreenFontSettings
-! Settings read by both Cairo and libXft: 
+! Settings read by both Cairo and libXft:
 ! Xft.antialias:  (bool)// FC_ANTIALIAS Whether glyphs can be antialiased
 Xft.antialias: true
 ! Xft.dpi:        (double)// FC_DPI  Target dots per inch
-Xft.dpi: 120.0
+Xft.dpi: 120
 ! Xft.hinting:    (bool)// FC_HINTING  Whether the rasterizer should use hinting
 Xft.hinting: true
 ! Xft.hintstyle:  (int) // FC_HINT_STYLE Automatic hinting style - hintnone hintslight hintmedium hintfull
 Xft.hintstyle: hintnone
 ! Xft.rgba:       (int) // FC_RGBA unknown, rgb, bgr, vrgb, vbgr, none - subpixel geometry
-Xft.rgba: none 
+Xft.rgba: none
 ! Xft.lcdfilter   (int) // FC_LCD_FILTER type of lcd filter to use - lcdnone lcddefault lcdlight lcdlegacy
 Xft.lcdfilter: lcddefault
 ! Settings specific to libXft:
@@ -24,7 +24,7 @@ Xft.lcdfilter: lcddefault
 ! Xft.autohint (bool) // FC_AUTOHINT Use autohinter instead of normal hinter
 Xft.autohint: false
 ! Xft.minspace (bool) // FC_MINSPACE use minimum line spacing
-! Xft.maxglyphmemory (int) // XFT_MAX_GLYPH_MEMORY 
+! Xft.maxglyphmemory (int) // XFT_MAX_GLYPH_MEMORY
 
 ! These ones seem to be unused?
 ! Xft.core (bool) //  XFT_CORE
@@ -37,7 +37,7 @@ Xft.autohint: false
 # define MONOFONT -*-terminus-medium-r-*-*-*-120-*-*-*-*-iso10646-1
 #endif
 
-#ifndef XFTMONOFONT 
+#ifndef XFTMONOFONT
 # define XFTMONOFONT Consolas-10
 #endif
 
@@ -45,10 +45,10 @@ Xft.autohint: false
 # define XFTFONT Lucida Grande-8
 #endif
 
-#include ".urxvtrc" 
-#include ".yeahconsolerc"
+#include ".urxvtrc"
+! #include ".yeahconsolerc"
 
-!Emacs*useXIM:false        
+!Emacs*useXIM:false
 Emacs*XlwMenu.font: XFTFONT
 Emacs.dialog*.font: XFTFONT
 Emacs*Paned*XlwMenu.background: gray90
@@ -91,7 +91,7 @@ Xcursor.theme: Obsidian
 *Command.shapeStyle: SHAPE_STYLE
 *cornerRoundPercent: CR_PERCENT
 *shapeStyle: SHAPE_STYLE
- 
+
 ! 16-color palette:
 ! black/#000000
 *color0: #121212
@@ -128,7 +128,7 @@ Xcursor.theme: Obsidian
 
 
 ! настройка внешнего вида отдельных приложений
- 
+
 !xcalc
 xcalc*geometry: 200x275
 xcalc.ti.bevel.background: #111111
@@ -172,13 +172,13 @@ xcalc.ti.button38.background: #555595
 xcalc.ti.button39.background: #555595
 XCalc*Cursor:                 hand2
 !XCalc*ShapeStyle:             rectangle
- 
+
 !xmessage
 !.xmessage.form.okay.background: #777777
 !.xmessage.form.okay.foreground: snow
 xmessage*defaultButton: okay
 Xmessage.form.message.Scroll:  WhenNeeded
- 
+
 !xfontsel
 !XFontSel*sampleText.background: TEXTBG
 XFontSel*menu*showUnselectable: false
@@ -197,7 +197,7 @@ XFontsel*MenuButton*MenuButtonStyle: select
 .xfontsel.pane.fieldBox.MenuButton.internalHeight: 1
 .xfontsel.pane.fieldBox.MenuButton.internalWidth: 2
 !.xfontsel.pane.fieldBox.MenuButton.shapeStyle: rectangle
- 
+
 !xterm
 *XTerm*background:  #000000
 *XTerm*foreground:  #efefef
@@ -205,7 +205,7 @@ XFontsel*MenuButton*MenuButtonStyle: select
 ! of the Athena widget library.  Comment them out if you have a shallow
 ! color depth.
 XTerm*mainMenu*backgroundPixmap:     gradient:vertical?dimension=600&start=gray10&end=gray40
-XTerm*mainMenu*foreground:          	white 
+XTerm*mainMenu*foreground:          	white
 XTerm*vtMenu*backgroundPixmap:       gradient:vertical?dimension=750&start=gray10&end=gray40
 XTerm*vtMenu*foreground:             white
 XTerm*fontMenu*backgroundPixmap:     gradient:vertical?dimension=300&start=gray10&end=gray40

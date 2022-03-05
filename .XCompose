@@ -1,4 +1,4 @@
-# -*-	mode: conf; -*-	
+# -*-	mode: conf; -*-
 include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
 
 # Punctuation
@@ -167,5 +167,3 @@ include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
 <Multi_key> <bar> <v> 			: "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
 <Multi_key> <less> <greater> <equal> 	: "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
 <Multi_key> <equal> <less> <greater> 	: "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-
-

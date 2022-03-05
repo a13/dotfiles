@@ -2,7 +2,7 @@
 ! геометрия (позиция, размер) окна (в символах). Стандартный размер: 80x24, увеличено для использования табов
 !URxvt.geometry: 82x26
 ! используемый шрифт
-! URxvt.font: xft:DejaVu Sans Mono:pixelsize=13,xft:Bitstream Vera Sans Mono 
+! URxvt.font: xft:DejaVu Sans Mono:pixelsize=13,xft:Bitstream Vera Sans Mono
 URxvt.font: xft:XFTMONOFONT,xft:Monospace
 URxvt*iconFile: /usr/share/pixmaps/urxvt_32x32.xpm
 !URxvt.font: xft:Terminus:slant=0:weight=80:width=100:pixelsize=14
@@ -14,7 +14,7 @@ URxvt.background: #000000
 ! цвет переднего плана
 URxvt.foreground: #f6f3e8
 ! процент "гашения" цвета текста в неактивном окне
-URxvt.fading: 40  
+URxvt.fading: 40
 !  уменьшение (-100 .. -1) или увеличение (0 .. 100) яркости прозрачного фона
 URxvt.shading: 100
 ! Псевдопрозрачность
@@ -35,10 +35,10 @@ URxvt.scrollBar: true
 URxvt*scrollTtyOutput: False
 ! прокрутка по нажатию клавиши
 URxvt*scrollTtyKeypress: True
-! 
+!
 URxvt*scrollWithBuffer: True
 URxvt*secondaryScroll: True
-! расположение скроллбара 
+! расположение скроллбара
 URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: true
 ! Мерцание курсора

@@ -1,15 +1,7 @@
+(use-modules (ice-9 format))
 ;; (use-modules (system repl server))
 ;; (spawn-server)
 
-(define (aosd-echo text)
-  (let ((osdcmd "aosd_cat -x 0 -y 0 -t 2 -p 1 -n Consolas\\ 22 -f 100 -u 2000 -o 200 -R white -l 5"))
-    (run-command (string-append "echo $@ " text "|" osdcmd))))
-
-(define (run-and-osd keys cmd osd-text)
-  (xbindkey-function keys
-                     (lambda ()
-                       (run-command cmd)
-                       (aosd-echo osd-text))))
 
 (define (bind-switch-to-desk number)
   (if (>= number 0)
@@ -26,19 +18,36 @@
 (define xterm "urxvtcd")
 (define sleep-command "dbus-send --system --print-reply --dest=\"org.freedesktop.UPower\" /org/freedesktop/UPower org.freedesktop.UPower.Suspend")
 
+(define (ec exp)
+  (string-append "emacsclient -c --eval "
+                 (format #f "\"~s\"" exp)))
+
+(define (webapp url)
+  (format #f "chromium-browser --app=~s" url))
+
 ;; misc commands
 (xbindkey '(mod4 r) "/home/dk/bin/rundmenu")
 (xbindkey '(mod4 w) "/home/dk/bin/windmenu xwin ebuf xdesk")
-(xbindkey '(mod4 h) "/home/dk/bin/webjump.sh conkeror")
-(xbindkey '(mod4 m) "/home/dk/bin/dxmmenu")
+(xbindkey '(mod4 h) "/home/dk/bin/webjump.sh chromium-browser")
+(xbindkey '(mod4 m) (webapp "https://web.telegram.org"))
+(xbindkey '(mod4 y) (webapp "https://maps.yandex.ru"))
+(xbindkey '(mod4 g) (webapp "https://maps.google.com"))
+(xbindkey '(mod4 o) (webapp "https://openstreetmap.org"))
+(xbindkey '(mod4 c) (webapp "https://calendar.google.com/"))
+(xbindkey '(XF86Mail) (webapp "https://mail.google.com"))
+(xbindkey '(XF86Search) "x-www-browser")
+
 (xbindkey '(mod4 b) "x-www-browser")
 (xbindkey '(mod4 l) "xscreensaver-command -lock || (xscreensaver -no-splash & xscreensaver-command -lock)")
 (xbindkey '(mod4 t) xterm)
 (xbindkey '(mod4 e) "emacsclient -c -a \"\"")
-(xbindkey '(mod4 j) "emacsclient -c --eval \"(call-interactively 'jabber-chat-with)\"")
+(xbindkey '(mod4 j)
+          (ec '(call-interactively 'telega-chat-with)))
 
-(xbindkey '(Print) "scrot /tmp/scrot.png")
-(xbindkey '(Shift Print) "scrot -s /tmp/scrot.png")
+;;          "emacsclient -c --eval \"(call-interactively 'jabber-chat-with)\"")
+
+(xbindkey '(Print) "flameshot gui -p /tmp")
+(xbindkey '(Shift Print) "flameshot full -c -p /tmp")
 
 ;; window controls
 (xbindkey '(mod4 Up) "wmctrl -r :ACTIVE: -b toggle,maximized_vert")
@@ -59,15 +68,15 @@
 (xbindkey '(XF86AudioMute) "amixer set Master toggle")
 ;; Fn+F7 - XF86Launch2
 ;; (xbindkey '(XF86Launch2) "")
-(xbindkey '(XF86Launch2) "samsung-tools --quiet --cpu cycle")
+;; (xbindkey '(XF86Launch2) "samsung-tools --quiet --cpu cycle")
 ;; Fn+F8 - XF86Launch3
-(xbindkey '(XF86Launch3) "samsung-tools --quiet --webcam toggle")
+;; (xbindkey '(XF86Launch3) "samsung-tools --quiet --webcam toggle")
 ;; Fn+F9 - XF86WLAN
-(xbindkey '(XF86WLAN) "samsung-tools --quiet --wireless toggle")
+;; (xbindkey '(XF86WLAN) "samsung-tools --quiet --wireless toggle")
 ;; Fn+Down - XF86MonBrightnessDown
-(xbindkey '(XF86MonBrightnessDown) "pgrep xbacklight || xbacklight -dec 15 -time 100 -steps 1")
+(xbindkey '(XF86MonBrightnessDown) "pgrep acpilight || acpilight -dec 15 -time 100 -steps 1")
 ;; Fn+Up - XF86MonBrightnessUp
-(xbindkey '(XF86MonBrightnessUp) "pgrep xbacklight || xbacklight -inc 15 -time 100 -steps 1")
+(xbindkey '(XF86MonBrightnessUp) "pgrep acpilight || acpilight -inc 15 -time 100 -steps 1")
 ;; Fn+Right - XF86AudioRaiseVolume
 (xbindkey '(XF86AudioRaiseVolume) "amixer set Master 1+")
 ;; Fn+Left - XF86AudioLowerVolume
@@ -96,5 +105,3 @@
 ;; <print>
 ;; <XF86AudioPlay>
 (xbindkey '(XF86AudioPlay) "xmms2 toggle")
-(xbindkey '(XF86Mail) "icedove")
-(xbindkey '(XF86Search) "x-www-browser")
