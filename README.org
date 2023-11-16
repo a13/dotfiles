@@ -1,0 +1,5 @@
+* GTK
+  #+begin_src conf :tangle ~/.config/gtk-3.0/settings.ini
+    [Settings]
+    gtk-key-theme-name = Emacs
+  #+end_src

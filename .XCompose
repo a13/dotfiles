@@ -167,3 +167,21 @@ include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
 <Multi_key> <bar> <v> 			: "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
 <Multi_key> <less> <greater> <equal> 	: "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
 <Multi_key> <equal> <less> <greater> 	: "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+
+# Vukovica
+
+<Multi_key> <Cyrillic_DE> <Cyrillic_SOFTSIGN> : "Ђ"
+<Multi_key> <Cyrillic_DE> <Cyrillic_softsign> : "Ђ"
+<Multi_key> <Cyrillic_de> <Cyrillic_softsign> : "ђ"
+<Multi_key> <Cyrillic_EL> <Cyrillic_SOFTSIGN> : "Љ"
+<Multi_key> <Cyrillic_EL> <Cyrillic_softsign> : "Љ"
+<Multi_key> <Cyrillic_el> <Cyrillic_softsign> : "љ"
+<Multi_key> <Cyrillic_EN> <Cyrillic_SOFTSIGN> : "Њ"
+<Multi_key> <Cyrillic_EN> <Cyrillic_softsign> : "Њ"
+<Multi_key> <Cyrillic_en> <Cyrillic_softsign> : "њ"
+<Multi_key> <Cyrillic_CHE> <Cyrillic_SOFTSIGN> : "Ћ"
+<Multi_key> <Cyrillic_CHE> <Cyrillic_softsign> : "Ћ"
+<Multi_key> <Cyrillic_che> <Cyrillic_softsign> : "ћ"
+<Multi_key> <Cyrillic_DE> <Cyrillic_ZHE> : "Џ"
+<Multi_key> <Cyrillic_DE> <Cyrillic_zhe> : "Џ"
+<Multi_key> <Cyrillic_de> <Cyrillic_zhe> : "џ"

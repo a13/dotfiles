@@ -49,8 +49,9 @@
 ;;(define-key *root-map* (kbd "i") "imdb")
 
 ;; Message window font
-;;(set-font "-xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1")
-(set-font "-*-terminus-medium-r-*-*-24-*-*-*-*-*-iso10646-1")
+
+(set-font "-*-terminus-medium-*-*-*-20-*-*-*-*-*-iso10646-1")
+;; (set-font "-*-terminus-medium-r-*-*-32-*-*-*-*-*-iso10646-1")
 ;;(set-font "-*-doslike-normal-*-*-*-*-180-75-75-*-*-*-*")
 ;;(set-font "-misc-monaco-medium-r-normal--0-0-0-0-p-0-iso10646-1")
 ;(set-frame-outline-width 1)
@@ -86,8 +87,9 @@
 (setf *mode-line-pad-y* 1)
 
 (setf stumpwm:*screen-mode-line-format*
-    (list "[^B%n^b] %W | ^B^07"
-        '(:eval (stumpwm:run-shell-command "date '+%R' | xargs echo -n" t)) "^n^b"))
+      (list "[^B%n^b] %W | ^B^07" "^>"
+            " ^7* "
+            '(:eval (stumpwm:run-shell-command "date '+%R' | xargs echo -n" t)) "^n^b"))
 ;; (setf *screen-mode-line-format*
 ;;       (list "^6*::^n  %g  ^6*::^n%w^6* :: ^8*CPU: ^n%f %C ^3*%t ^6*:: ^n^r%M ^6*:: ^n%b ^6*:: ^n %l ^6*::^8* - "
 ;; 	    '(:eval (run-shell-command "date +\"%T %d-%m-%Y\" | tr -d '[:cntrl:]'" t))))
@@ -136,8 +138,6 @@
 (define-frame-preference "ws-im"
   (0 T T :CLASS "Chromium-browser" :INSTANCE "web.telegram.org"))
 
-
-
 (define-key *top-map* (kbd "M-k") "move-focus up")
 (define-key *top-map* (kbd "M-j") "move-focus down")
 (define-key *top-map* (kbd "M-l") "move-focus right")
@@ -147,6 +147,12 @@
 (define-key *top-map* (kbd "C-M-j") "move-window down")
 (define-key *top-map* (kbd "C-M-l") "move-window right")
 (define-key *top-map* (kbd "C-M-h") "move-window left")
+
+(define-key *top-map* (kbd "C-M-Right") "move-window up")
+(define-key *top-map* (kbd "C-M-Down") "move-window down")
+(define-key *top-map* (kbd "C-M-Right") "move-window right")
+(define-key *top-map* (kbd "C-M-Left") "move-window left")
+
 
 ;;(defparameter *dbus-power-template* "dbus-send --system --print-reply --dest=\"org.freedesktop.Hal\" /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement." )
 (defparameter *dbus-power-template*
@@ -161,3 +167,7 @@
 (defcommand-pm reboot "Reboot")
 (defcommand-pm shutdown "Shutdown")
 ;;(resize-head 0 24 0 1000 600)
+
+(setq *message-window-gravity* :top)
+(set-bg-color "#515171")
+(set-msg-border-width 0)
