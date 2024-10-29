@@ -87,9 +87,12 @@
 (setf *mode-line-pad-y* 1)
 
 (setf stumpwm:*screen-mode-line-format*
-      (list "[^B%n^b] %W | ^B^07" "^>"
-            " ^7* "
-            '(:eval (stumpwm:run-shell-command "date '+%R' | xargs echo -n" t)) "^n^b"))
+      (list
+       "^PeachPuff[^B%n^b] %W | ^B^07" "^>"
+       " ^7* "
+       "%d"
+       ;; '(:eval (stumpwm:run-shell-command "date '+%R' | xargs echo -n" t))
+       "^n^b"));
 ;; (setf *screen-mode-line-format*
 ;;       (list "^6*::^n  %g  ^6*::^n%w^6* :: ^8*CPU: ^n%f %C ^3*%t ^6*:: ^n^r%M ^6*:: ^n%b ^6*:: ^n %l ^6*::^8* - "
 ;; 	    '(:eval (run-shell-command "date +\"%T %d-%m-%Y\" | tr -d '[:cntrl:]'" t))))
